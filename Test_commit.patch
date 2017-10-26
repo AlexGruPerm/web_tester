@@ -1,0 +1,13 @@
+Index: TesterMain.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- TesterMain.py	(date 1509053113000)
++++ TesterMain.py	(revision )
+@@ -31,4 +31,4 @@
+ 
+ grid_search = XpathSearch(report_grid.content)
+ grid_search.search("//*")
+-#Comments for test git from PyCharm
++#Comments for test git from PyCharm into github
