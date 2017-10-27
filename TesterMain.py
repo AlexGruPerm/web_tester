@@ -4,7 +4,6 @@ import requests
 import Params
 
 #AlexGruPerm github
-#https://github.com/AlexGruPerm/web_tester
 #https://github.com/AlexGruPerm/web_tester.git
 
 jar = requests.cookies.RequestsCookieJar()
@@ -32,5 +31,5 @@ report_grid.get_content(url,Params.grid_param_1,True)
 #report_grid.read_content_file()
 
 grid_search = XpathSearch(report_grid.content)
-grid_search.search("//*")
+grid_search.search("/*")
 #Comments for test git from PyCharm into github _
