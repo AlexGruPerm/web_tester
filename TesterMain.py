@@ -7,10 +7,9 @@ import Params
 #https://github.com/AlexGruPerm/web_tester.git
 
 jar = requests.cookies.RequestsCookieJar()
-jar.set('PHPSESSID',          '30a37d8f7897bfd9b0c80536cbcc15b0', domain='mkrpk.ders.proitr.ru', path='/')
-jar.set('session_prm_salary', 'b566fb7790cb6c57e02646302191c478', domain='mkrpk.ders.proitr.ru', path='/')
-jar.set('_ym_uid', '1509037403214612514',                         domain='.proitr.ru', path='/')
-jar.set('_ym_isad','2',                                           domain='.proitr.ru', path='/')
+jar.set('PHPSESSID',          '328fe257868ed419e48d8aaf44f1e085', domain='mkrpk.ders.proitr.ru', path='/')
+jar.set('session_prm_salary', 'd7946be1334a613d86c97ca7deda7e5d', domain='mkrpk.ders.proitr.ru', path='/')
+jar.set('__DebugUkaz',        '0',                                domain='mkrpk.ders.proitr.ru', path='/salary')
 
 '''
 # Object for main report page
@@ -31,5 +30,6 @@ report_grid.get_content(url,Params.grid_param_1,True)
 #report_grid.read_content_file()
 
 grid_search = XpathSearch(report_grid.content)
-grid_search.search("/*")
+grid_search.search("//*")
 #Comments for test git from PyCharm into github _
+
