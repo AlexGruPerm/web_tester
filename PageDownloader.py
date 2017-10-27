@@ -21,6 +21,18 @@ class PageDownload():
        self.file_name = self.page_name+'.html'
        self.is_save_file = False  # Save content of html in local file self.file_name
        self.content = None
+       self.headers= \
+       {
+           "Accept": "*/*",
+           "Accept-Encoding": "gzip, deflate",
+           "Accept-Language": "en-US,en;q=0.8,ru;q=0.6",
+           "Cache-Control": "no-cache",
+           "Connection": "keep-alive",
+           "Content-Type": "application/x-www-form-urlencoded",
+           "Pragma": "no-cache",
+           "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+           "X-Requested-With": "XMLHttpRequest"
+       }
 
    def set_cookie(self, p_cookie):
         '''Set class member with object type requests.cookies.RequestsCookieJar'''
@@ -30,24 +42,7 @@ class PageDownload():
         '''Download html from url with send cookie (self.cookie) and post data. Save content into file file_name
            if parameter is not None'''
         t1 = datetime.datetime.now()
-        #headers = {'Content-Type': 'application/x-www-form-urlencoded'}
-
-        headers = {
-            "Accept": "*/*",
-            "Accept-Encoding": "gzip, deflate",
-            "Accept-Language": "en-US,en;q=0.8,ru;q=0.6",
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Host": "mkrpk.ders.proitr.ru",
-            "Origin": "http://mkrpk.ders.proitr.ru",
-            "Pragma": "no-cache",
-            "Referer": "http://mkrpk.ders.proitr.ru/salary/index.php?show=rep_11_1",
-            "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
-            "X-Requested-With": "XMLHttpRequest"
-        }
-
-        r = requests.post(url, cookies=self.cookie, data=post_data, headers=headers)
+        r = requests.post(url, cookies=self.cookie, data=post_data, headers=self.headers)
         t2 = datetime.datetime.now()
         delta = t2 - t1
 

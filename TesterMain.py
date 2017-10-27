@@ -26,8 +26,8 @@ mpage_search.search("/html/body/div[@id='h-content']/div[contains(@class,'title'
 report_grid = PageDownload('Report_1_Grid')
 report_grid.set_cookie(jar)
 url = 'http://mkrpk.ders.proitr.ru/salary/index.php'
-report_grid.get_content(url,Params.grid_param_1,True)
-#report_grid.read_content_file()
+#report_grid.get_content(url,Params.grid_param_3,True)
+report_grid.read_content_file()
 
 grid_search = XpathSearch(report_grid.content)
 grid_search.search("//*")
