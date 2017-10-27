@@ -61,31 +61,23 @@ for trs in r[1:len(r)]:
  matrix.append(table_line)
 #print("Table contains : ",str(table_tr_count)," rows.")
 
-'''
-print(type(Params.grid_param_3))
-udata = json.dumps(Params.grid_param_3, sort_keys=False,indent=4, separators=(',', ': '))
-print(type(udata))
-
-if 'data' in udata:
-    print('Exists search Data!')
-else:
-    print('No search Data!')
-'''
-print("OK 1. len_matric=",len(matrix))
 
 test_col_num = 0 # first column in report
 test_col_sum = Decimal(0.0)
 
 for i in range(len(matrix)):
         for j in range(len(matrix[i])):
-                if j==0:
+                if i==0:  # calculate fields in first row
+                    test_col_num += 1
+                if j==0:  # calculate sum of cells in one column
                     try:
                         test_col_sum = test_col_sum + Decimal(matrix[i][j].strip().replace(',', '.').replace(u'\xa0',''))
                     except ValueError:
                         print("      error on line [",i,"]",end=" ")
 
+print("OK 1. len_matric=",len(matrix))
 print("OK 2. test_col_sum=",str(test_col_sum))
+print("OK 3. test_col_num=",str(test_col_num))
 
 
-#pprint.pprint(matrix)
 
