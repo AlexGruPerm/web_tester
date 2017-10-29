@@ -43,6 +43,7 @@ class PageDownload():
            if parameter is not None'''
         t1 = datetime.datetime.now()
         r = requests.post(url, cookies=self.cookie, data=post_data, headers=self.headers)
+        print('self.headers=',type(self.headers))
         t2 = datetime.datetime.now()
         delta = t2 - t1
 
