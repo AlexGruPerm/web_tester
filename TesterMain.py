@@ -29,9 +29,8 @@ mpage_search.search("/html/body/div[@id='h-content']/div[contains(@class,'title'
 report_grid = PageDownload('Report_1_Grid')
 report_grid.set_cookie(jar)
 url = 'http://mkrpk.ders.proitr.ru/salary/index.php'
-#report_grid.get_content(url,Params.grid_param_3,True)
+#report_grid.get_content(url,Params.grid_param_1,True)
 report_grid.read_content_file()
-
 
 
 grid_search = XpathSearch(report_grid.content)
@@ -80,4 +79,13 @@ print("OK 2. test_col_sum=",str(test_col_sum))
 print("OK 3. test_col_num=",str(test_col_num))
 
 
+'''
+print(type(Params.grid_param_3))
+udata = json.dumps(Params.grid_param_3, sort_keys=False,indent=4, separators=(',', ': '))
+print(type(udata))
 
+if 'data' in udata:
+    print('Exists search Data!')
+else:
+    print('No search Data!')
+'''
