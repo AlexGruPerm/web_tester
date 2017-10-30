@@ -16,4 +16,4 @@ class TestProject():
 
     def start(self):
         """ Run this test """
-        print("[TestProject] self.test_name = ",self.test_name)
+        print("run... this test.........    [TestProject] self.test_name = ",self.test_name)

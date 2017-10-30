@@ -11,7 +11,6 @@ class WTest_Rep_01_1(TestProject):
 
     def __init__(self):
         """ Class construtcot """
-        print('Call __init__ of WTest_Rep_01_1')
         super(WTest_Rep_01_1,self).__init__(self.cookie,self.headers,self.test_name)
 
 
