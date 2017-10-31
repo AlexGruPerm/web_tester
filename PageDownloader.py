@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 class PageDownload():
    '''Class just for download HTML content and return html as text'''
    download_time = float(0.0)
-   download_size = float(0.0)
+   download_size = int(0)
 
    def __init__(self, page_name):
        '''Class constructor, set some initial variables.'''
@@ -24,6 +24,8 @@ class PageDownload():
        self.file_name = self.page_name+'.html'
        self.is_save_file = False  # Save content of html in local file self.file_name
        self.content = None
+       self.headers = None
+       '''
        self.headers= \
        {
            "Accept": "*/*",
@@ -36,6 +38,11 @@ class PageDownload():
            "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
            "X-Requested-With": "XMLHttpRequest"
        }
+       '''
+
+   def set_header(self, p_headers):
+        '''Set class member with object type requests.cookies.RequestsCookieJar'''
+        self.headers = p_headers
 
    def set_cookie(self, p_cookie):
         '''Set class member with object type requests.cookies.RequestsCookieJar'''
@@ -45,6 +52,12 @@ class PageDownload():
         '''Download html from url with send cookie (self.cookie) and post data. Save content into file file_name
            if parameter is not None'''
         t1 = datetime.datetime.now()
+
+        #print('url=', url)
+        #print('cookies=', self.cookie)
+        #print('headers=', self.headers)
+        #print('post_data=',post_data)
+
         r = requests.post(url, cookies=self.cookie, data=post_data, headers=self.headers)
         #print('self.headers=',type(self.headers))
         t2 = datetime.datetime.now()
@@ -57,7 +70,7 @@ class PageDownload():
                 output_file.write(r.text.encode('utf-8'))
 
         self.content = r.text.encode('utf-8').decode('utf-8')
-        self.download_time = sys.getsizeof(self.content)
+        self.download_size = sys.getsizeof(self.content)
         #print("Size of string representation of result is ", sys.getsizeof(self.content), " bytes")
 
    def read_content_file(self):
