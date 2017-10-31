@@ -85,3 +85,5 @@ for x in r2.keys():
     r2.update({x: r2.get(x)+1000})
 
 print(r2)
+r2.update({'k2': {'zop':'123'}})
+print(r2)
