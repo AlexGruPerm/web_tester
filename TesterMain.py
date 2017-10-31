@@ -58,7 +58,7 @@ for trs in r[1:len(r)]:
          table_line.append(str(t.text))
  #print(table_line)
  matrix.append(table_line)
-#print("Table contains : ",str(table_tr_count)," rows.")
+ #print("Table contains : ",str(table_tr_count)," rows.")
 
 
 test_col_num = 0 # first column in report

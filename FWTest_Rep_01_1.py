@@ -10,6 +10,7 @@ class WTest_Rep_01_1(TestProject):
     test_time = Params.test_1_time
     test_size = Params.test_1_size
     params = Params.grid_param_1
+    tproperty = None
 
     def __init__(self):
         """ Class constructor """
