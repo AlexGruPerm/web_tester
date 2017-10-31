@@ -14,6 +14,9 @@ import xml.etree.ElementTree as ET
 
 class PageDownload():
    '''Class just for download HTML content and return html as text'''
+   download_time = float(0.0)
+   download_size = float(0.0)
+
    def __init__(self, page_name):
        '''Class constructor, set some initial variables.'''
        self.cookie = None
@@ -43,9 +46,10 @@ class PageDownload():
            if parameter is not None'''
         t1 = datetime.datetime.now()
         r = requests.post(url, cookies=self.cookie, data=post_data, headers=self.headers)
-        print('self.headers=',type(self.headers))
+        #print('self.headers=',type(self.headers))
         t2 = datetime.datetime.now()
         delta = t2 - t1
+        self.download_time = delta.total_seconds()
 
         print('Now save to file',self.file_name)
         if is_save_file:
@@ -53,9 +57,8 @@ class PageDownload():
                 output_file.write(r.text.encode('utf-8'))
 
         self.content = r.text.encode('utf-8').decode('utf-8')
-
-        print("Size of string representation of result is ", sys.getsizeof(self.content), " bytes")
-        print("Duration of load first page is ", str(delta.total_seconds()), " seconds")
+        self.download_time = sys.getsizeof(self.content)
+        #print("Size of string representation of result is ", sys.getsizeof(self.content), " bytes")
 
    def read_content_file(self):
         '''Function read file with html and populate member self.content'''
