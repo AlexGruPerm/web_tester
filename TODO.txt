@@ -1,5 +1,5 @@
 
-1) Put all params by individual test in one json
+1) Put all params by individual test in one dict
 Example:
 class WTest_Rep_11_1(TestProject):
 
@@ -12,3 +12,5 @@ class WTest_Rep_11_1(TestProject):
     test_size = Params.test_2_size
     params = Params.grid_param_2
     tproperty = Params.test_2_property #
+    
+2) save test history in dict that related with OS file or BD.     
