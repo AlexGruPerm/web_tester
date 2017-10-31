@@ -19,26 +19,10 @@ class PageDownload():
 
    def __init__(self, page_name):
        '''Class constructor, set some initial variables.'''
-       self.cookie = None
-       self.page_name = page_name # Internal name of class instance (human)
-       self.file_name = self.page_name+'.html'
+       #self.page_name = page_name # Internal name of class instance (human)
+       self.file_name = page_name+'.html'#self.page_name+'.html'
        self.is_save_file = False  # Save content of html in local file self.file_name
        self.content = None
-       self.headers = None
-       '''
-       self.headers= \
-       {
-           "Accept": "*/*",
-           "Accept-Encoding": "gzip, deflate",
-           "Accept-Language": "en-US,en;q=0.8,ru;q=0.6",
-           "Cache-Control": "no-cache",
-           "Connection": "keep-alive",
-           "Content-Type": "application/x-www-form-urlencoded",
-           "Pragma": "no-cache",
-           "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
-           "X-Requested-With": "XMLHttpRequest"
-       }
-       '''
 
    def set_header(self, p_headers):
         '''Set class member with object type requests.cookies.RequestsCookieJar'''
@@ -48,7 +32,15 @@ class PageDownload():
         '''Set class member with object type requests.cookies.RequestsCookieJar'''
         self.cookie = p_cookie
 
-   def get_content(self,url,post_data,is_save_file):
+   def set_url(self, p_url):
+        '''Set class member with object type requests.cookies.RequestsCookieJar'''
+        self.url = p_url
+
+   def set_params(self, p_params):
+        '''Set class member with object type requests.cookies.RequestsCookieJar'''
+        self.params = p_params
+
+   def get_content(self,is_save_file):#url,post_data,
         '''Download html from url with send cookie (self.cookie) and post data. Save content into file file_name
            if parameter is not None'''
         t1 = datetime.datetime.now()
@@ -58,7 +50,7 @@ class PageDownload():
         #print('headers=', self.headers)
         #print('post_data=',post_data)
 
-        r = requests.post(url, cookies=self.cookie, data=post_data, headers=self.headers)
+        r = requests.post(url=self.url, cookies=self.cookie, data=self.params, headers=self.headers)
         #print('self.headers=',type(self.headers))
         t2 = datetime.datetime.now()
         delta = t2 - t1

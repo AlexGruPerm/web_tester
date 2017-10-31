@@ -4,8 +4,10 @@ from FWTest_Rep_11_1 import WTest_Rep_11_1
 
 def main():
     """ Main procedure to start all tests. """
-    tr = TestRunner([WTest_Rep_11_1])#,WTest_Rep_01_1])
+    tr = TestRunner([WTest_Rep_11_1,WTest_Rep_01_1])
     tr.init_test()
     tr.start()
+    print('=======================')
+    tr.test_arr_objs()
 
 main()

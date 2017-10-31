@@ -19,3 +19,8 @@ class TestRunner():
         for i in range(len(self.arr_test_objs)):
             self.arr_test_objs[i].start()  # for each instance is running start method that defined in parent class TestProject
         print('Tests ends.')
+
+    def test_arr_objs(self):
+        """ make some test about array of objects"""
+        for i in range(len(self.arr_test_objs)):
+            print(self.arr_test_objs[i].test_name," was loaded ",self.arr_test_objs[i].download_time," seconds.")
