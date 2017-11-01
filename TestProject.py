@@ -38,6 +38,7 @@ class TestProject():
         tpage.set_cookie(self.cookie)
         tpage.set_header(self.headers)
         tpage.set_url(self.url)
+        print('type self.params =',type(self.params))
         tpage.set_params(self.params)
 
         tpage.get_content(True)

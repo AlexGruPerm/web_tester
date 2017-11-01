@@ -1,3 +1,37 @@
+import Params
+import json
+
+#s = {'col':'s1'}
+#p = {'k1':'v1','data':json.dumps(s)}
+p =  Params.grid_param_3
+
+print(type(p))
+print(type(p['data']))
+
+dict_data = p['data']
+
+print('X=',type(dict_data))
+
+# Here we can make some manipulations with dict_data
+p.update({'data': json.dumps(dict_data, sort_keys=False, separators=(',', ': '))})
+
+print(type(p))
+print(type(p['data']))
+
+
+#print(p['data'])
+#p_keys = p.keys()
+#p_vals = p.values()
+#print('KEYS:',p_keys)
+
+#for k in p_keys:
+#    print('k=',k,"  type=",type(p[k])," ",p[k])
+
+#p_data = p.get('data')
+#print('type(p_data)=',type(p_data),' ',p_data)
+
+#print("type(p.get('data'))",type(p.get('data')))
+
 
 #4.10.1. Dictionary view objects
 '''
@@ -76,6 +110,7 @@ print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 print('r=',r)
 '''
 
+'''
 r2 = {'k1':1,'k2':2,'k3':3}
 print(r2)
 r2.update({'k1':100}) #!!!!!!!!!!!!!!!
@@ -87,3 +122,4 @@ for x in r2.keys():
 print(r2)
 r2.update({'k2': {'zop':'123'}})
 print(r2)
+'''

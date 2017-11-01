@@ -75,7 +75,7 @@ grid_param_2 = {
                "p_show_one_service":"1",
                "html_id":"gridOutput",
                "ajaxId":"8186256858",
-               "data": json.dumps(data_str_2)
+               "data": data_str_2
                }
 
 headers_2 = {
@@ -122,7 +122,10 @@ grid_param_3 = {
                "p_show_one_service":"1",
                "html_id":"gridOutput",
                "ajaxId":"8186256858",
-               "data": json.dumps(data_str_3)
+               "data": data_str_3 #old code "data": json.dumps(data_str_3)
                }
+# Don't foreget make update param like:
+#  p.update({'data': json.dumps(dict_data, sort_keys=False, separators=(',', ': '))})
+# look at PageDownload.get_content
 
 #-----------------------------------------------------------------------------------------------------------------------

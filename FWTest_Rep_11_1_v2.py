@@ -11,7 +11,9 @@ class WTest_Rep_11_1_v2(TestProject):
     test_name = Params.test_3_name
     test_time = Params.test_3_time
     test_size = Params.test_3_size
+
     params = Params.grid_param_3
+
     tproperty = Params.test_3_property # dict of check property value
     tproperty_page = {
                       "row_count" : 0,

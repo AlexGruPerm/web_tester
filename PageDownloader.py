@@ -50,7 +50,19 @@ class PageDownload():
         #print('headers=', self.headers)
         #print('post_data=',post_data)
 
-        r = requests.post(url=self.url, cookies=self.cookie, data=self.params, headers=self.headers)
+        p = self.params
+        try:
+          dict_data = p['data']
+          # < class 'dict'>
+          # < class 'dict'>
+          # Here we can make some manipulations with dict_data
+          p.update({'data': json.dumps(dict_data, sort_keys=False, separators=(',', ': '))})
+          # < class 'dict'>
+          # < class 'str'>
+        except KeyError:
+          print("Not found key : 'data ")
+
+        r = requests.post(url=self.url, cookies=self.cookie, data=p, headers=self.headers)
         #print('self.headers=',type(self.headers))
         t2 = datetime.datetime.now()
         delta = t2 - t1
