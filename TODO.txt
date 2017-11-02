@@ -13,4 +13,6 @@ class WTest_Rep_11_1(TestProject):
     params = Params.grid_param_2
     tproperty = Params.test_2_property #
     
-2) save test history in dict that related with OS file or BD.     
+2) save test history in dict that related with OS file or BD.
+
+3) Yakushev>pylint C:\web_tester\PageDownloader.py

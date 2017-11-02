@@ -1,6 +1,16 @@
 import Params
 import json
 
+d={'k1':'v11', 'k2':'v22'}
+
+for (index, item) in enumerate(d):
+    print(index," _ ",item)
+
+for (index, item) in d:
+    print(index," _ ",item)
+
+
+'''
 #s = {'col':'s1'}
 #p = {'k1':'v1','data':json.dumps(s)}
 p =  Params.grid_param_3
@@ -9,14 +19,20 @@ print(type(p))
 print(type(p['data']))
 
 dict_data = p['data']
-
 print('X=',type(dict_data))
+'''
 
+
+
+
+
+
+'''
 # Here we can make some manipulations with dict_data
 p.update({'data': json.dumps(dict_data, sort_keys=False, separators=(',', ': '))})
-
 print(type(p))
 print(type(p['data']))
+'''
 
 
 #print(p['data'])
