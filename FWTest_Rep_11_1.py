@@ -21,7 +21,7 @@ class WTest_Rep_11_1(TestProject):
 
     def __init__(self):
         """ Class constructor """
-        super(WTest_Rep_11_1,self).__init__()
+        super(WTest_Rep_11_1,self).__init__(self.test_time)
 
     def check_property(self):
         """ This function is written special for test 11_1 and for addition checks """

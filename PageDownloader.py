@@ -19,7 +19,7 @@ class PageDownload():
     '''
     Class just for download HTML content and return html as text.
     '''
-    # pylint_: disable=too-many-instance-attributes
+    # pylint: disable=too-many-instance-attributes
     # It is reasonable in this case.
     download_time = float(0.0)
     download_size = int(0)

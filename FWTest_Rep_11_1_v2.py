@@ -5,7 +5,7 @@ from decimal import Decimal
 
 class WTest_Rep_11_1_v2(TestProject):
     '''Class for user's 1 test '''
-    cookie = Params.cookies_2
+    cookie = Params.cookies_3
     headers = Params.headers_2
     url = Params.url_2
     test_name = Params.test_3_name
@@ -23,7 +23,9 @@ class WTest_Rep_11_1_v2(TestProject):
 
     def __init__(self):
         """ Class constructor """
-        super(WTest_Rep_11_1_v2,self).__init__()
+        super(WTest_Rep_11_1_v2,self).__init__(self.test_time,self.cookie, self.headers,
+                                               self.test_name, self.url, self.params,
+                                               self.tproperty)
 
     def check_property(self):
         """ This function is written special for test 11_1 and for addition checks """

@@ -1,4 +1,8 @@
 
+0) Make parameters as 1 dict object and send it into parent basic class from each test class.
+
+0) change on tuple of Classes?  tr = TestRunner([WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1])
+
 1) Put all params by individual test in one dict
 Example:
 class WTest_Rep_11_1(TestProject):

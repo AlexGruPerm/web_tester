@@ -14,6 +14,6 @@ class WTest_Rep_01_1(TestProject):
 
     def __init__(self):
         """ Class constructor """
-        super(WTest_Rep_01_1,self).__init__()
+        super(WTest_Rep_01_1,self).__init__(self.test_time)
 
 

@@ -6,7 +6,8 @@ from FWTest_Rep_11_1_v2 import WTest_Rep_11_1_v2
 
 def main():
     '''Main procedure to start all tests.'''
-    test_runner = TestRunner([WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1])
+    test_runner = TestRunner([WTest_Rep_11_1_v2])
+    #WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1
     test_runner.init_test()
     test_runner.start()
     # print('=======================')

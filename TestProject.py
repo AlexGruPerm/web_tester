@@ -44,9 +44,8 @@ class TestProject():
     def check_size(self):
         '''Check download size for criterion.'''
         print("Page Download size is: ", str(self.download_size), " bytes. Criterion : ",
-              str(self.test_size.Sequence[0]), " - ", str(self.test_size.Sequence[1]))
-        if self.download_size >= self.test_size.Sequence[0] and \
-           self.download_size <= self.test_size.Sequence[1]:
+              str(self.test_size[0]), " - ", str(self.test_size[1]))
+        if self.download_size >= self.test_size[0] and self.download_size <= self.test_size[1]:
             print("    SUCCESS")
         else:
             print("    FAIL")
