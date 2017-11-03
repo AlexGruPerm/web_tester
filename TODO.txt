@@ -1,9 +1,13 @@
 
-0) Make parameters as 1 dict object and send it into parent basic class from each test class.
+1) Save test history in dict that related with OS file or BD.
+   param.name as unique identifier of test.
 
-1) change on tuple with using append of Classes?
-tr = TestRunner([WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1])
+ global_test_hist = {
+                     "hist":
+                     {
 
-2) save test history in dict that related with OS file or BD.
+                     }
+                    }
 
-3) Yakushev>pylint C:\web_tester\PageDownloader.py
+
+

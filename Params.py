@@ -1,9 +1,11 @@
 import json
 import requests
 
+#PredProd http://mkrpk.ders.proitr.ru/salary/index.php domain: mkrpk.ders.proitr.ru
+
 params_1 = {
            "name": "Report 11_1 v2 Report page",
-           "url": "http://mkrpk.ders.proitr.ru/salary/index.php",
+           "url": "http://mkr.permkrai.ru/salary/index.php",
            "headers": {
                        "Accept": "*/*",
                        "Accept-Encoding": "gzip, deflate",
@@ -16,9 +18,9 @@ params_1 = {
                        "X-Requested-With": "XMLHttpRequest"
                       },
            "cookies": {
-                       "PHPSESSID":         {"value":"48077d9eb759e64181b53233ad315546", "domain":"mkrpk.ders.proitr.ru", "path":"/"},
-                       "session_prm_salary":{"value":"8eadbfdb733654ed78ee07447ad4a364", "domain":"mkrpk.ders.proitr.ru", "path":"/"},
-                       "__YakushevDev":     {"value":"1",                                "domain":"mkrpk.ders.proitr.ru", "path":"/salary"}
+                       "PHPSESSID":         {"value":"da53b8145cafc9cdc6bb54a7b94c5e74", "domain":"mkr.permkrai.ru", "path":"/"},
+                       "session_prm_salary":{"value":"8a3cbd4faf80662fe39373f374c27810", "domain":"mkr.permkrai.ru", "path":"/"},
+                       "__YakushevDev":     {"value":"1",                                "domain":"mkr.permkrai.ru", "path":"/salary"}
                       },
            "post_data": {
                          "ajax":"rep_11_1",
