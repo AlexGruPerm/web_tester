@@ -5,16 +5,8 @@ from decimal import Decimal
 
 class WTest_Rep_11_1_v2(TestProject):
     '''Class for user's 1 test '''
-    cookie = Params.cookies_3
-    headers = Params.headers_2
-    url = Params.url_2
-    test_name = Params.test_3_name
-    test_time = Params.test_3_time
-    test_size = Params.test_3_size
+    test_config = Params.params_1
 
-    params = Params.grid_param_3
-
-    tproperty = Params.test_3_property # dict of check property value
     tproperty_page = {
                       "row_count" : 0,
                       "col_sum"   : 0,
@@ -23,9 +15,7 @@ class WTest_Rep_11_1_v2(TestProject):
 
     def __init__(self):
         """ Class constructor """
-        super(WTest_Rep_11_1_v2,self).__init__(self.test_time,self.cookie, self.headers,
-                                               self.test_name, self.url, self.params,
-                                               self.tproperty)
+        super(WTest_Rep_11_1_v2,self).__init__(self.test_config)
 
     def check_property(self):
         """ This function is written special for test 11_1 and for addition checks """
