@@ -65,6 +65,11 @@ class PageDownload():
         logging.debug('self.test_proj_instance.cookie=' + (str(self.test_proj_instance.cookie)))
 
         #print(self.test_proj_instance.params)
+        # test_params.update({'data': json.dumps(dict_data,
+        #                                       sort_keys=False,
+        #                                       separators=(',', ': '))})
+
+
 
         requests_res = requests.post(url=self.test_proj_instance.url,
                                      cookies=self.test_proj_instance.cookie,

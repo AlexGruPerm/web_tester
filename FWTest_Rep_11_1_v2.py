@@ -1,3 +1,4 @@
+import logging
 from TestProject import TestProject
 import Params
 from FXpathSeacher import XpathSearch
@@ -49,9 +50,9 @@ class WTest_Rep_11_1_v2(TestProject):
         self.tproperty_page["col_sum"] = float(test_col_sum)
         self.tproperty_page["col_count"] = test_col_num
 
-        for key, value in self.tproperty.items():
-            print("Expected (", key, ") - ", value, " real ", self.tproperty_page[key])
+        for key, value in self.test_custom_property.items():
+            logging.info("Expected ("+ str(key)+ ") - "+ str(value)+ " real "+ str(self.tproperty_page[key]))
             if value == self.tproperty_page[key]:
-                print("    SUCCESS")
+                logging.info('    SUCCESS')
             else:
-                print("    FAIL")
+                logging.info('    FAIL')

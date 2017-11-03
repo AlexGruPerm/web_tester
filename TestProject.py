@@ -57,8 +57,18 @@ class TestProject():
                                     domain=test_config['cookies'].get(cook_key).get('domain'),
                                     path=test_config['cookies'].get(cook_key).get('path')
                                     )
-                self.params =  json.dumps(test_config['post_data'])
+
+                #PREV: self.params =  test_config['post_data'] #json.dumps(test_config['post_data'])
+                # First we need populate self.params and next update subtag
+                self.params = test_config['post_data']
+                self.params.update({'data': json.dumps(test_config['post_data']['data'], sort_keys=False, separators=(',', ': '))})
+
                 self.test_time = test_config['test_suc_time']
+
+                logging.debug('self.test_time MIN=' + str(self.test_time['min']))
+                logging.debug('self.test_time MAX=' + str(self.test_time['max']))
+
+
                 self.test_size = test_config['test_suc_size']
                 self.test_custom_property = test_config['test_suc_custom_property']
                 logging.debug('All values in params checked for not None,Null')
@@ -112,5 +122,5 @@ class TestProject():
         #print("self.page_content=", type(self.page_content))
         self.check_time()
         self.check_size()
-        #if not self.tproperty is None:
-        #    self.check_property()
+        if not self.test_custom_property is None:
+            self.check_property()
