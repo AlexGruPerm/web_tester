@@ -3,10 +3,23 @@
    param.name as unique identifier of test.
 
  global_test_hist = {
-                     "hist":
-                     {
-
-                     }
+                     "history":
+                      [
+                       {"name":"Report 11_1 v2 Report page",
+                        "hist":[
+                                {"run_datetime":"01.01.2017 12:34:46", "download_time":"3.45", "res_download_time":"SUCCESS"},
+                                {"run_datetime":"01.01.2017 12:36:45", "download_time":"4.45", "res_download_time":"FAIL"},
+                                {"run_datetime":"01.01.2017 12:38:44", "download_time":"3.67", "res_download_time":"SUCCESS"}
+                               ]
+                       },
+                       {"name":"Report_v2",
+                        "hist":[
+                                {"run_datetime":"01.01.2017 12:34:46", "download_time":"1.45", "res_download_time":"SUCCESS"},
+                                {"run_datetime":"01.01.2017 12:36:45", "download_time":"1.65", "res_download_time":"SUCCESS"},
+                                {"run_datetime":"01.01.2017 12:38:44", "download_time":"5.67", "res_download_time":"FAIL"}
+                               ]
+                       }
+                      ]
                     }
 
 

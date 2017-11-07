@@ -3,6 +3,8 @@ import requests
 
 #PredProd http://mkrpk.ders.proitr.ru/salary/index.php domain: mkrpk.ders.proitr.ru
 
+results_text_file_1 = 'test_result.txt'
+
 params_1 = {
            "name": "Report 11_1 v2 Report page",
            "url": "http://mkr.permkrai.ru/salary/index.php",

@@ -3,6 +3,7 @@ import logging
 import json
 import requests
 from PageDownloader import PageDownload
+import Params
 
 
 
@@ -22,6 +23,16 @@ class TestProject():
     params = None
     tproperty = None
     test_custom_property = None
+    # this object contains all tests results
+    # common object for all tests.
+    dict_test_results = None
+    results_text_file = None
+
+    def read_tests_history(self):
+        logging.debug(" >>> read file "+self.results_text_file+" into DICT dict_test_results")
+        with open(self.results_text_file) as f:
+            self.dict_test_results = dict(x.rstrip().split(None, 1) for x in f)
+        logging.debug("-------" + self.dict_test_results)
 
     #cookie, headers, test_name
     def __init__(self, test_config):
@@ -51,6 +62,7 @@ class TestProject():
                 self.url = test_config['url']
                 self.headers = test_config['headers']
                 self.cookie = requests.cookies.RequestsCookieJar()
+                self.results_text_file = Params.results_text_file_1
                 for cook_key in test_config['cookies']:
                     self.cookie.set(cook_key,
                                     test_config['cookies'].get(cook_key).get('value'),
@@ -62,19 +74,16 @@ class TestProject():
                 # First we need populate self.params and next update subtag
                 self.params = test_config['post_data']
                 self.params.update({'data': json.dumps(test_config['post_data']['data'], sort_keys=False, separators=(',', ': '))})
-
                 self.test_time = test_config['test_suc_time']
-
                 logging.debug('self.test_time MIN=' + str(self.test_time['min']))
                 logging.debug('self.test_time MAX=' + str(self.test_time['max']))
-
-
                 self.test_size = test_config['test_suc_size']
                 self.test_custom_property = test_config['test_suc_custom_property']
                 logging.debug('All values in params checked for not None,Null')
                 logging.debug('Test name (' + self.test_name + ') url (' + self.url + ')')
                 logging.debug("TestProject __init__ test_name="+self.test_name)
                 logging.debug("TestProject __init__ url="+self.url)
+                self.read_tests_history()
         except Exception as err_obj:
             logging.critical('External exception handler: ' + str(err_obj.args))
 
@@ -104,17 +113,25 @@ class TestProject():
         '''Must be rewrited if necessary in child class. '''
         pass
 
+    def save_results_in_text_file(self):
+        logging.debug("===========================================")
+        logging.debug("  ")
+        logging.debug("BEGIN SAVE RESULTS INTO : "+self.results_text_file)
+
+        logging.debug("BEGIN SAVE RESULTS ")
+        logging.debug("  ")
+        logging.debug("===========================================")
+
+
     def start(self):
         '''Run this test '''
         logging.debug("[TestProject] self.test_name = " + self.test_name)
         tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
-
         #tpage.set_cookie(self.cookie)
         #tpage.set_header(self.headers)
         #tpage.set_url(self.url)
         #print('type self.params =', type(self.params))
         #tpage.set_params(self.params)
-
         tpage.get_content(True)
         self.download_time = tpage.download_time
         self.download_size = tpage.download_size
@@ -124,3 +141,4 @@ class TestProject():
         self.check_size()
         if not self.test_custom_property is None:
             self.check_property()
+        self.save_results_in_text_file()
