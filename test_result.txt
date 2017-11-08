@@ -4,49 +4,32 @@
             "name": "Report 11_1 v2 Report page",
             "hist": [
                 {
-                    "run_datetime": "2017.11.08 17:00:54",
-                    "download_time": 3.354073,
-                    "res_download_time": "SUCCESS"
+                    "run_datetime": "2017.11.08 18:28:25",
+                    "download_time": 3.133071,
+                    "res_download_time": "SUCCESS",
+                    "download_size": 155750,
+                    "res_download_size": "SUCCESS"
                 },
                 {
-                    "run_datetime": "2017.11.08 17:01:27",
-                    "download_time": 2.663054,
-                    "res_download_time": "SUCCESS"
+                    "run_datetime": "2017.11.08 18:36:03",
+                    "download_time": 2.964062,
+                    "res_download_time": "SUCCESS",
+                    "download_size": 155750,
+                    "res_download_size": "SUCCESS"
                 },
                 {
-                    "run_datetime": "2017.11.08 17:02:00",
-                    "download_time": 2.582052,
-                    "res_download_time": "SUCCESS"
+                    "run_datetime": "2017.11.08 18:36:14",
+                    "download_time": 2.532052,
+                    "res_download_time": "SUCCESS",
+                    "download_size": 155750,
+                    "res_download_size": "SUCCESS"
                 },
                 {
-                    "run_datetime": "2017.11.08 17:02:33",
-                    "download_time": 2.46605,
-                    "res_download_time": "SUCCESS"
-                },
-                {
-                    "run_datetime": "2017.11.08 17:03:05",
-                    "download_time": 2.52105,
-                    "res_download_time": "SUCCESS"
-                },
-                {
-                    "run_datetime": "2017.11.08 17:03:38",
-                    "download_time": 2.746056,
-                    "res_download_time": "SUCCESS"
-                },
-                {
-                    "run_datetime": "2017.11.08 17:04:10",
-                    "download_time": 2.803057,
-                    "res_download_time": "SUCCESS"
-                },
-                {
-                    "run_datetime": "2017.11.08 17:04:43",
-                    "download_time": 2.201044,
-                    "res_download_time": "SUCCESS"
-                },
-                {
-                    "run_datetime": "2017.11.08 17:05:15",
-                    "download_time": 2.197044,
-                    "res_download_time": "SUCCESS"
+                    "run_datetime": "2017.11.08 18:37:15",
+                    "download_time": 2.578055,
+                    "res_download_time": "SUCCESS",
+                    "download_size": 155750,
+                    "res_download_size": "SUCCESS"
                 }
             ]
         }

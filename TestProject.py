@@ -2,8 +2,8 @@
 import logging
 import io
 import json
-import requests
 import datetime
+import requests
 from PageDownloader import PageDownload
 import Params
 
@@ -16,6 +16,7 @@ class TestProject():
     download_time = float(0.0)
     download_time_test_res = None
     download_size = float(0.0)
+    download_size_test_res = None
     page_content = None # str content of downloaded page
     test_time = None
     test_size = None
@@ -30,8 +31,10 @@ class TestProject():
     # common object for all tests.
     this_test_dict = []
     results_text_file = None
+    current_datetime = None
 
     def read_tests_history(self):
+        '''Read content oh tests history from file.'''
         logging.debug(" read results file: "+self.results_text_file)
         with io.open(self.results_text_file, encoding='utf-8', errors='ignore') as file:
             data = json.load(file)
@@ -48,7 +51,8 @@ class TestProject():
             logging.debug('Begin parse params')
             # Check that all necessary keys exists in dict
             try:
-                check_keys = ('name', 'url', 'headers', 'cookies', 'post_data', 'test_suc_time', 'test_suc_size')
+                check_keys = ('name', 'url', 'headers', 'cookies', 'post_data',
+                              'test_suc_time', 'test_suc_size')
                 for c_key in check_keys:
                     if not c_key in test_config:
                         raise KeyError('Key ' + c_key + ' not found in test config params.')
@@ -73,13 +77,13 @@ class TestProject():
                     self.cookie.set(cook_key,
                                     test_config['cookies'].get(cook_key).get('value'),
                                     domain=test_config['cookies'].get(cook_key).get('domain'),
-                                    path=test_config['cookies'].get(cook_key).get('path')
-                                    )
+                                    path=test_config['cookies'].get(cook_key).get('path'))
 
                 #PREV: self.params =  test_config['post_data'] #json.dumps(test_config['post_data'])
                 # First we need populate self.params and next update subtag
                 self.params = test_config['post_data']
-                self.params.update({'data': json.dumps(test_config['post_data']['data'], sort_keys=False, separators=(',', ': '))})
+                self.params.update({'data': json.dumps(test_config['post_data']['data'],
+                                                       sort_keys=False, separators=(',', ': '))})
                 self.test_time = test_config['test_suc_time']
                 logging.debug('self.test_time MIN=' + str(self.test_time['min']))
                 logging.debug('self.test_time MAX=' + str(self.test_time['max']))
@@ -98,8 +102,9 @@ class TestProject():
         #print("Page Download time is: ", str(self.download_time), " seconds. Criterion : ",
         #      str(self.test_time['min']), " - ", str(self.test_time['max']))
         logging.info("Page Download time is: "+ str(self.download_time)+ " seconds. Criterion : "+
-                      str(self.test_time['min'])+ " - "+ str(self.test_time['max']))
-        if self.download_time >= self.test_time['min'] and self.download_time <= self.test_time['max']:
+                     str(self.test_time['min'])+ " - "+ str(self.test_time['max']))
+        if self.download_time >= self.test_time['min'] and \
+           self.download_time <= self.test_time['max']:
             self.download_time_test_res = 'SUCCESS'
         else:
             self.download_time_test_res = 'FAIL'
@@ -109,41 +114,49 @@ class TestProject():
     def check_size(self):
         '''Check download size for criterion.'''
         logging.info("Page Download size is: "+ str(self.download_size)+ " bytes. Criterion : "+
-                      str(self.test_size['min'])+ " - "+ str(self.test_size['max']))
-        if self.download_size >= self.test_size['min'] and self.download_size <= self.test_size['max']:
-            logging.info('    SUCCESS')
+                     str(self.test_size['min'])+ " - "+ str(self.test_size['max']))
+        if self.download_size >= self.test_size['min'] and \
+           self.download_size <= self.test_size['max']:
+            self.download_size_test_res = 'SUCCESS'
         else:
-            logging.info('    FAIL')
+            self.download_size_test_res = 'FAIL'
+        logging.info('    ' + self.download_size_test_res)
+
 
     def check_property(self):
         '''Must be rewrited if necessary in child class. '''
         pass
 
+
+    def populate_tmp_dict_with_test_res(self):
+        '''Populate temporary dict with test results.'''
+        this_test_res_dict = {}
+        this_test_res_dict['run_datetime'] = self.current_datetime
+        this_test_res_dict['download_time'] = self.download_time
+        this_test_res_dict['res_download_time'] = self.download_time_test_res
+        this_test_res_dict['download_size'] = self.download_size
+        this_test_res_dict['res_download_size'] = self.download_size_test_res
+        return this_test_res_dict
+
+
     def save_results_in_text_file(self):
+        '''Append new test results into text file'''
         self.read_tests_history()
         logging.debug("BEGIN SAVE RESULTS INTO : "+self.results_text_file)
         for test_block in self.this_test_dict['history']:
             if self.test_name in test_block['name']:
                 logging.debug("Block "+self.test_name+" found in results file")
                 this_test_dict = test_block['hist']
-                # ------------------------
-                this_test_res_dict = {}
-                this_test_res_dict['run_datetime'] = self.current_datetime
-                this_test_res_dict['download_time'] = self.download_time
-                this_test_res_dict['res_download_time'] = self.download_time_test_res
-                # ------------------------
+                this_test_res_dict = self.populate_tmp_dict_with_test_res()
                 this_test_dict.append(this_test_res_dict)
                 break
         else:
             logging.debug("Block "+ self.test_name+ " not found in results file")
-            this_test_res_dict = {}
-            this_test_res_dict['run_datetime'] = self.current_datetime
-            this_test_res_dict['download_time'] = self.download_time
-            this_test_res_dict['res_download_time'] = self.download_time_test_res
+            this_test_res_dict = self.populate_tmp_dict_with_test_res()
             self.this_test_dict['history'].append({"name": self.test_name, "hist": [this_test_res_dict]})
-
         with open('test_result.txt', 'wb') as output_file:
-            output_file.write(json.dumps(self.this_test_dict, sort_keys=False, indent=4).encode('utf-8'))
+            output_file.write(json.dumps(self.this_test_dict,
+                                         sort_keys=False, indent=4).encode('utf-8'))
         logging.debug("END SAVE RESULTS ")
 
 
@@ -152,16 +165,10 @@ class TestProject():
         logging.debug("[TestProject] self.test_name = " + self.test_name)
         self.current_datetime = datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")
         tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
-        #tpage.set_cookie(self.cookie)
-        #tpage.set_header(self.headers)
-        #tpage.set_url(self.url)
-        #print('type self.params =', type(self.params))
-        #tpage.set_params(self.params)
         tpage.get_content(True)
         self.download_time = tpage.download_time
         self.download_size = tpage.download_size
         self.page_content = tpage.content
-        #print("self.page_content=", type(self.page_content))
         self.check_time()
         self.check_size()
         if not self.test_custom_property is None:

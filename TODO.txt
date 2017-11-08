@@ -1,26 +1,8 @@
 
-1) Save test history in dict that related with OS file or BD.
-   param.name as unique identifier of test.
+1) Store all results of one test run in single dict.
+2) Write separate classes (universal interface) for saving results into text file, db.
+3)
 
- global_test_hist = {
-                     "history":
-                      [
-                       {"name":"Report 11_1 v2 Report page",
-                        "hist":[
-                                {"run_datetime":"01.01.2017 12:34:46", "download_time":"3.45", "res_download_time":"SUCCESS"},
-                                {"run_datetime":"01.01.2017 12:36:45", "download_time":"4.45", "res_download_time":"FAIL"},
-                                {"run_datetime":"01.01.2017 12:38:44", "download_time":"3.67", "res_download_time":"SUCCESS"}
-                               ]
-                       },
-                       {"name":"Report_v2",
-                        "hist":[
-                                {"run_datetime":"01.01.2017 12:34:46", "download_time":"1.45", "res_download_time":"SUCCESS"},
-                                {"run_datetime":"01.01.2017 12:36:45", "download_time":"1.65", "res_download_time":"SUCCESS"},
-                                {"run_datetime":"01.01.2017 12:38:44", "download_time":"5.67", "res_download_time":"FAIL"}
-                               ]
-                       }
-                      ]
-                    }
 
 
 

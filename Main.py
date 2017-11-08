@@ -15,9 +15,9 @@ def main():
     #WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1
     test_runner.init_test()
 
-    for i in range(1,10):
-        test_runner.start()
-        sleep(30)
+    #for i in range(1,10):
+    test_runner.start()
+    #    sleep(30)
 
     # print('=======================')
     # here we have saved property of tests tr.test_arr_objs()
