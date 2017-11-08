@@ -1,7 +1,9 @@
 """Base Class for all tests Classes. Implements common checks, time,size. """
 import logging
+import io
 import json
 import requests
+import datetime
 from PageDownloader import PageDownload
 import Params
 
@@ -12,6 +14,7 @@ class TestProject():
     # pylint: disable=too-many-instance-attributes
     # It is reasonable in this case.
     download_time = float(0.0)
+    download_time_test_res = None
     download_size = float(0.0)
     page_content = None # str content of downloaded page
     test_time = None
@@ -25,14 +28,17 @@ class TestProject():
     test_custom_property = None
     # this object contains all tests results
     # common object for all tests.
-    dict_test_results = None
+    this_test_dict = []
     results_text_file = None
 
     def read_tests_history(self):
-        logging.debug(" >>> read file "+self.results_text_file+" into DICT dict_test_results")
-        with open(self.results_text_file) as f:
-            self.dict_test_results = dict(x.rstrip().split(None, 1) for x in f)
-        logging.debug("-------" + self.dict_test_results)
+        logging.debug(" read results file: "+self.results_text_file)
+        with io.open(self.results_text_file, encoding='utf-8', errors='ignore') as file:
+            data = json.load(file)
+        self.this_test_dict = data
+
+
+
 
     #cookie, headers, test_name
     def __init__(self, test_config):
@@ -83,7 +89,6 @@ class TestProject():
                 logging.debug('Test name (' + self.test_name + ') url (' + self.url + ')')
                 logging.debug("TestProject __init__ test_name="+self.test_name)
                 logging.debug("TestProject __init__ url="+self.url)
-                self.read_tests_history()
         except Exception as err_obj:
             logging.critical('External exception handler: ' + str(err_obj.args))
 
@@ -95,9 +100,10 @@ class TestProject():
         logging.info("Page Download time is: "+ str(self.download_time)+ " seconds. Criterion : "+
                       str(self.test_time['min'])+ " - "+ str(self.test_time['max']))
         if self.download_time >= self.test_time['min'] and self.download_time <= self.test_time['max']:
-            logging.info('    SUCCESS')
+            self.download_time_test_res = 'SUCCESS'
         else:
-            logging.info('    FAIL')
+            self.download_time_test_res = 'FAIL'
+        logging.info('    '+self.download_time_test_res)
 
 
     def check_size(self):
@@ -114,18 +120,37 @@ class TestProject():
         pass
 
     def save_results_in_text_file(self):
-        logging.debug("===========================================")
-        logging.debug("  ")
+        self.read_tests_history()
         logging.debug("BEGIN SAVE RESULTS INTO : "+self.results_text_file)
+        for test_block in self.this_test_dict['history']:
+            if self.test_name in test_block['name']:
+                logging.debug("Block "+self.test_name+" found in results file")
+                this_test_dict = test_block['hist']
+                # ------------------------
+                this_test_res_dict = {}
+                this_test_res_dict['run_datetime'] = self.current_datetime
+                this_test_res_dict['download_time'] = self.download_time
+                this_test_res_dict['res_download_time'] = self.download_time_test_res
+                # ------------------------
+                this_test_dict.append(this_test_res_dict)
+                break
+        else:
+            logging.debug("Block "+ self.test_name+ " not found in results file")
+            this_test_res_dict = {}
+            this_test_res_dict['run_datetime'] = self.current_datetime
+            this_test_res_dict['download_time'] = self.download_time
+            this_test_res_dict['res_download_time'] = self.download_time_test_res
+            self.this_test_dict['history'].append({"name": self.test_name, "hist": [this_test_res_dict]})
 
-        logging.debug("BEGIN SAVE RESULTS ")
-        logging.debug("  ")
-        logging.debug("===========================================")
+        with open('test_result.txt', 'wb') as output_file:
+            output_file.write(json.dumps(self.this_test_dict, sort_keys=False, indent=4).encode('utf-8'))
+        logging.debug("END SAVE RESULTS ")
 
 
     def start(self):
         '''Run this test '''
         logging.debug("[TestProject] self.test_name = " + self.test_name)
+        self.current_datetime = datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")
         tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
         #tpage.set_cookie(self.cookie)
         #tpage.set_header(self.headers)
