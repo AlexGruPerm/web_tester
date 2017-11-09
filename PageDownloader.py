@@ -24,10 +24,6 @@ class PageDownload():
     # It is reasonable in this case.
     download_time = float(0.0)
     download_size = int(0)
-    #headers = None
-    #cookie = None
-    #url = None
-    #params = None
     test_proj_instance = None
 
     def __init__(self, test_proj):
@@ -42,40 +38,12 @@ class PageDownload():
     def get_content(self, is_save_file):#url,post_data,
         """Download html from url with send cookie (self.cookie) and post data."""
         t_begin = datetime.datetime.now()
-
-        #print('url=', url)
-        #print('cookies=', self.cookie)
-        #print('headers=', self.headers)
-        #print('post_data=',post_data)
-
-        #test_params = self.params
-        #try:
-            #dict_data = test_params['data']
-            # < class 'dict'>
-            # < class 'dict'>
-            # Here we can make some manipulations with dict_data
-            #test_params.update({'data': json.dumps(dict_data,
-            #                                       sort_keys=False,
-            #                                       separators=(',', ': '))})
-            # < class 'dict'>
-            # < class 'str'>
-        #except KeyError:
-        #    print("Not found key : 'data ")
         logging.debug('type self.cookie'+(str(type(self.test_proj_instance.cookie))))
-        logging.debug('self.test_proj_instance.cookie=' + (str(self.test_proj_instance.cookie)))
-
-        #print(self.test_proj_instance.params)
-        # test_params.update({'data': json.dumps(dict_data,
-        #                                       sort_keys=False,
-        #                                       separators=(',', ': '))})
-
-
-
+        #logging.debug('self.test_proj_instance.cookie=' + (str(self.test_proj_instance.cookie)))
         requests_res = requests.post(url=self.test_proj_instance.url,
                                      cookies=self.test_proj_instance.cookie,
                                      data=self.test_proj_instance.params,
                                      headers=self.test_proj_instance.headers)
-
         t_end = datetime.datetime.now()
         delta = t_end - t_begin
         self.download_time = delta.total_seconds()
@@ -86,7 +54,6 @@ class PageDownload():
 
         self.content = requests_res.text.encode('utf-8').decode('utf-8')
         self.download_size = sys.getsizeof(self.content)
-        #print("Size of string representation of result is ", sys.getsizeof(self.content), " bytes")
 
 
     def read_content_file(self):
