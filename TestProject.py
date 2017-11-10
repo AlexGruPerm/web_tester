@@ -164,7 +164,8 @@ class TestProject():
         '''Run this test '''
         logging.debug("[TestProject] self.test_name = " + self.test_name)
         self.current_datetime = datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")
-        tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
+        # OLD tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
+        tpage =  PageDownload(self.test_name, self.url, self.cookie, self.params, self.headers)
         tpage.get_content(True)
         self.download_time = tpage.download_time
         self.download_size = tpage.download_size

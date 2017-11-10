@@ -27,7 +27,7 @@ for test_block in data['history']:
 y_max = math.floor(max(y)+1)
 print(y_max)
 
-plt.plot(x, y, 'ro')
+plt.plot(x, y, 'b.')
 plt.axis([0, 400, 0, y_max])
 plt.show()
 

@@ -24,26 +24,34 @@ class PageDownload():
     # It is reasonable in this case.
     download_time = float(0.0)
     download_size = int(0)
-    test_proj_instance = None
+    file_name = None
+    content = None
+    url = None
+    cookie = None
+    params = None
+    headers = None
+    #test_proj_instance = None
 
-    def __init__(self, test_proj):
+    def __init__(self, test_name, url, cookie, params, headers):
         '''Class constructor, set some initial variables.'''
         #self.page_name = page_name # Internal name of class instance (human)
-        self.test_proj_instance = test_proj #instance of class TestProject
-        self.file_name = self.test_proj_instance.test_name+'.html'#self.page_name+'.html'
-        self.is_save_file = False  # Save content of html in local file self.file_name
-        self.content = None
+        #self.test_proj_instance = test_proj #instance of class TestProject
+        self.file_name = test_name+'.html'#self.page_name+'.html'
+        self.url = url
+        self.cookie = cookie
+        self.params = params
+        self.headers = headers
 
 
     def get_content(self, is_save_file):#url,post_data,
         """Download html from url with send cookie (self.cookie) and post data."""
         t_begin = datetime.datetime.now()
-        logging.debug('type self.cookie'+(str(type(self.test_proj_instance.cookie))))
+        #logging.debug('type self.cookie'+(str(type(self.cookie))))
         #logging.debug('self.test_proj_instance.cookie=' + (str(self.test_proj_instance.cookie)))
-        requests_res = requests.post(url=self.test_proj_instance.url,
-                                     cookies=self.test_proj_instance.cookie,
-                                     data=self.test_proj_instance.params,
-                                     headers=self.test_proj_instance.headers)
+        requests_res = requests.post(url = self.url,
+                                     cookies = self.cookie,
+                                     data = self.params,
+                                     headers = self.headers)
         t_end = datetime.datetime.now()
         delta = t_end - t_begin
         self.download_time = delta.total_seconds()
@@ -51,7 +59,6 @@ class PageDownload():
         if is_save_file:
             with open(self.file_name, 'wb') as output_file:
                 output_file.write(requests_res.text.encode('utf-8'))
-
         self.content = requests_res.text.encode('utf-8').decode('utf-8')
         self.download_size = sys.getsizeof(self.content)
 

@@ -12,12 +12,12 @@ def main():
     tests_list = []
     # here we can add tests into common list
     tests_list.append(WTest_Rep_11_1_v2)
-    tests_list.append(WTest_Rep_11_1_v3)
+    #tests_list.append(WTest_Rep_11_1_v3)
     test_runner = TestRunner(tests_list)
     #WTest_Rep_11_1, WTest_Rep_11_1_v2, WTest_Rep_01_1
     test_runner.init_test()
 
-    #for i in range(1,360):
+    #for i in range(1,2400):
     test_runner.start()
     #    sleep(30)
 
