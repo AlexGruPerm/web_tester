@@ -82,8 +82,13 @@ class TestProject():
                 #PREV: self.params =  test_config['post_data'] #json.dumps(test_config['post_data'])
                 # First we need populate self.params and next update subtag
                 self.params = test_config['post_data']
-                self.params.update({'data': json.dumps(test_config['post_data']['data'],
-                                                       sort_keys=False, separators=(',', ': '))})
+                #update only if 'data' exists
+                if 'data' in test_config['post_data'].keys():
+                    logging.debug("KEY data exists in KEY post_data")
+                    self.params.update({'data': json.dumps(test_config['post_data']['data'],
+                                                           sort_keys=False, separators=(',', ': '))})
+                else:
+                    logging.debug("KEY data NOT exists in KEY post_data")
                 self.test_time = test_config['test_suc_time']
                 logging.debug('self.test_time MIN=' + str(self.test_time['min']))
                 logging.debug('self.test_time MAX=' + str(self.test_time['max']))
@@ -162,14 +167,16 @@ class TestProject():
 
     def start(self):
         '''Run this test '''
-        logging.debug("[TestProject] self.test_name = " + self.test_name)
+        logging.info("===================================================== ")
+        logging.info("[TestProject] self.test_name = " + self.test_name)
         self.current_datetime = datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")
-        # OLD tpage = PageDownload(self) #inside PageDownload constructor we send TestProject instance.
         tpage =  PageDownload(self.test_name, self.url, self.cookie, self.params, self.headers)
         tpage.get_content(True)
+        # get 3 variables from PD
         self.download_time = tpage.download_time
         self.download_size = tpage.download_size
-        self.page_content = tpage.content
+        self.page_content  = tpage.content
+
         self.check_time()
         self.check_size()
         if not self.test_custom_property is None:

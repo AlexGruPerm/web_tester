@@ -30,13 +30,10 @@ class PageDownload():
     cookie = None
     params = None
     headers = None
-    #test_proj_instance = None
 
     def __init__(self, test_name, url, cookie, params, headers):
         '''Class constructor, set some initial variables.'''
-        #self.page_name = page_name # Internal name of class instance (human)
-        #self.test_proj_instance = test_proj #instance of class TestProject
-        self.file_name = test_name+'.html'#self.page_name+'.html'
+        self.file_name = test_name+'.html'
         self.url = url
         self.cookie = cookie
         self.params = params

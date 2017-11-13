@@ -1,0 +1,725 @@
+<pre class="frontendajaxactions" id="frontendajaxactions" style="display:none">FE.manageEvent("ajaxonload",function(event, target){
+  FE.loadEFilesJS([{id:[137],path:"modules/common/js/jquery/jquery.watch.js?rnd=1503657768"},{id:[143],path:"modules/common/js/jquery/jquery.tooltip.js?rnd=1503657768"},{id:[144],path:"modules/common/js/qstring.js?rnd=1503657768"},{id:[175],path:"modules/common/js/jquery/ui.stepper.js?rnd=1503657768"},{id:[191],path:"modules/common/js/jquery/ui.draggable.js?rnd=1503657768"},{id:[193],path:"modules/common/js/windows.js?rnd=1503657768"},{id:[233],path:"modules/common/js/jquery/jquery.numberMask.js?rnd=1503657768"},{id:[234],path:"modules/common/js/jquery/jquery.maskedinput-1.2.2.js?rnd=1503657768"},{id:[201],path:"modules/common/js/jquery/jquery.form.min.js?rnd=1503657768"},{id:[202],path:"modules/common/js/jquery/html2canvas.js?rnd=1503657768"},{id:[203],path:"modules/common/js/jquery/canvas_rgbcolor.js?rnd=1503657768"},{id:[204],path:"modules/common/js/jquery/canvas_StackBlur.js?rnd=1503657768"},{id:[205],path:"modules/common/js/jquery/canvas_canvg.js?rnd=1503657768"},{id:[130,131,132,133,134,135,136,138,139,140],path:"temp/hashes/js/common/3a70fa8797e9461eb3e69412947c5388a.js?rnd=1510318720"},{id:[190],path:"src/theme/js/portal.js?rnd=1507030869"},{id:[194],path:"modules/ui/js/ui.new.windows.js?rnd=1503657825"},{id:[151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,176,177,179],path:"temp/hashes/js/ui/0934377f9d947bb7fad9447e262c8ef5a.js?rnd=1510318721"},{id:[146],path:"modules/ui/skins/light_2011/js/new_ui.js?rnd=1503657825"},{id:[182],path:"modules/datetimepicker/js/xcal.js?rnd=1503657770"},{id:[198],path:"modules/tree/js/tree.js?rnd=1503657821"},{id:[199],path:"modules/tree/js/tree.ext.js?rnd=1503657821"},{id:[213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232],path:"temp/hashes/js/grid_dev2/729c704a9cc4add8060be4060f9b35bea.js?rnd=1510318721"},{id:[235],path:"modules/embed/js/swfobject.js?rnd=1503657782"},{id:[236],path:"modules/embed/js/embed.js?rnd=1503657782"},{id:[237],path:"modules/embed/js/clientembed.js?rnd=1503657782"},{id:[238],path:"modules/embed/js/html5embed.js?rnd=1503657782"},{id:[239],path:"modules/grid_form/js/grid_form.js?rnd=1503657790"},{id:[200],path:"modules/export/js/exporter.js?rnd=1503657785"},{id:[206,207,208,209],path:"temp/hashes/js/eds/9edf43fce5b9c93542025d5eec39fcd2a.js?rnd=1510318721"},{id:[184],path:"src/js/video-js/video.js?rnd=1507030869"},{id:[185],path:"src/js/video.js?rnd=1507030869"},{id:[240],path:"src/js/base_manager.js?rnd=1507030869"},{id:[430],path:"src/oiv_info/js/oivinfo_manager.js?rnd=1510309703"},{id:[243],path:"src/js/input_forms/iface.js?rnd=1507030869"}]);FE.loadEFile('431','src/oiv_info/css/oiv_style.css');FE.loadEFile('183','src/js/video-js/video-js.css');FE.loadEFile(210,'temp/hashes/css/eds/498a7d5c082593e4ffccaee9331bf564a.css');FE.loadEFile(212,'temp/hashes/css/grid_dev2/d48a3b5f423227c404d3c19b0f3cb11fa.css');FE.loadEFile('197','modules/tree/css/tree.css');FE.loadEFile('181','modules/datetimepicker/css/xcal.css');FE.loadEFile('196','modules/ui/skins/light_2011/css/theme_msk_mkr.css');FE.loadEFile('195','modules/ui/skins/light_2011/css/theme_unique_ui.css');FE.loadEFile('149','modules/ui/skins/light_2011/css/icomoon.css');FE.loadEFile('148','modules/ui/skins/light_2011/css/img-icons.css');FE.loadEFile('147','modules/ui/skins/light_2011/css/old_control.css');FE.loadEFile('145','modules/ui/skins/light_2011/css/new_ui.css');FE.loadEFile(180,'temp/hashes/css/ui/c00ac8bbf7cb27d325948cd51c52441fa.css');FE.loadEFile('254','modules/ui/css/ui.pagination.css');FE.loadEFile('150','modules/ui/css/ui.button.css');FE.loadEFile('189','src/theme/css/ui.css');FE.loadEFile('188','src/theme/css/style.css');FE.loadEFile('187','src/theme/css/authorization.css');FE.loadEFile('186','src/theme/css/reset.css');FE.loadEFile(192,'temp/hashes/css/common/8e4456d230f7235d6ee6e0e71f4d1529a.css');$.browser.browserName = "Chrome"; $.browser.browserVersion = "61.0.3163.100";$.browser.isIPad = false;$.browser.isMobile = false;$.browser.isPhone = false;
+});
+FE.manageEvent("ajaxloadcompleted",function(event, target){
+  window.AllExporters.newExporter('page');window.AllExporters.get( 'page' ).register( { "ajax": "oiv_info", "action": "get_report", "html_id": "treeOutput", "ajaxId": "6924254115", "p_oiv_id": "69737", "id_check": "-1", "id_small": "-1", "id_type": "3", "id_actual": "-1", "page_num": "1", "p_str_fltr": "420029", "p_use_inn": "1", "p_use_id": "0", "p_use_okpo": "0", "p_use_name": "0", "p_use_full": "0", "curSep": "1", "curPage": "page_num" } );OivInfoManager.pagenumber=1;OivInfoManager.sep=1;OivInfoManager.oiv="69737";        $('#phdPager').html($('#tmp_phdPager').html());        $('#tmp_phdPager').remove();      ;
+});
+</pre><pre id="frontendajaxactionslength" style="display:none">4765</pre><div style="display:none" id="6924254115" class="ajaxResult"><pre>set custom error handler</pre><pre>string(20) "Config is CoreConfig"
+</pre><pre>          [PG] new connect to PostgreSQL thanks to property data</pre><br/><b>Cached query</b><pre>string(11) "magic_files"
+</pre><pre>          inc dir /var/www/mkr/salary/src/classes/interface</pre><pre>          inc dir /var/www/mkr/salary/src/classes</pre><pre>          inc dir /var/www/mkr/salary/src/classes/items</pre><pre>          inc dir /var/www/mkr/salary/src/classes/lists</pre><pre>         Theme created </pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onbeforeexecute</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onafterchecksession</pre><pre>         adding func to onauthnotactivated</pre><pre>         adding func to onafterlogout</pre><pre>         adding func to onauthnouser</pre><pre>        starting loading modules</pre><pre>          loading modules/common/module.php</pre><pre>          loading modules/uidocsystem/module.php</pre><pre>          module modules/uidocsystem/module.php doesnt exists</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onfinish</pre><pre>          handling onbeforeauth</pre><pre>          executing event onbeforeauth</pre><pre>         result of event onbeforeauth is: { "onBeforeAuth": null, "checkVariables": null, "setAllModules": null, "doAuthorizeByToken": false }</pre><pre>          handling onafterchecksession</pre><pre>          executing event onafterchecksession</pre><pre>         result of event onafterchecksession is: { "checkAuthSession": null }</pre><pre>          handling onafterauth</pre><pre>          executing event onafterauth</pre><pre>         result of event onafterauth is: { "onAfterAuth": null, "updateCookie": null, "checkAuthorizedExport": null }</pre><pre>          loaded Theme /var/www/mkr/salary/src/theme/theme.php</pre><pre>         Theme created </pre><pre>          loading modules/ui/module.php</pre><pre>          UI module loaded</pre><pre>          didnt add function</pre><pre>         adding func to onexactbeforeexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to initmodal</pre><pre>          inc dir /var/www/mkr/salary/modules/ui/classes/new</pre><pre>          loading modules/uitree/module.php</pre><pre>          loading modules/ui/module.php</pre><pre>          module modules/ui already loaded</pre><pre>          inc dir /var/www/mkr/salary//modules/uitree/classes</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          DateTimePicker module loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/tree/module.php</pre><pre>          TreeSelectionModifier Create</pre><pre>          TreeSelectionModifier get from omg mode= 0 </pre><br/><b>Cached query</b><pre>string(32) "b41b3561db83d88e39c6f1c9f4d3d507"
+</pre><pre>          handling onbeforeexecute</pre><pre>          executing event onbeforeexecute</pre><pre>         result of event onbeforeexecute is: { "onBeforeExecute": null }</pre><pre>      Starting execute file src/oiv_info/idx_oiv.php</pre><pre>          handling onexactbeforeexecute</pre><pre>          executing event onexactbeforeexecute</pre><pre>         result of event onexactbeforeexecute is: { "initStructAndTitle": null }</pre><pre>          inc dir /var/www/mkr/salary/src/oiv_info/classes</pre><pre>          loading modules/grid_form/module.php</pre><pre>          loading modules/grid_dev2/module.php</pre><pre>          Grid dev2 module loaded !</pre><pre>          loading modules/embed/module.php</pre><pre>          loading modules/export/module.php</pre><pre>          loading modules/common/module.php</pre><pre>          module modules/common already loaded</pre><pre>          loading modules/common/module.php</pre><pre>          module modules/common already loaded</pre><pre>          loading modules/common/module.php</pre><pre>          module modules/common already loaded</pre><pre>          Export module loaded !</pre><pre>          loading modules/wkpdf/module.php</pre><pre>          module modules/wkpdf/module.php doesnt exists</pre><pre>          loading modules/eds/module.php</pre><pre>          inc dir /var/www/mkr/salary//modules/eds/classes</pre><pre>          EDS module loaded !</pre><pre>          loading modules/wkpdflight/module.php</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  string(5) "69737"
+}
+</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  string(2) "-1"
+}
+</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  string(2) "-1"
+}
+</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  string(2) "-1"
+}
+</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  string(1) "3"
+}
+</pre><br/><b>OIV</b><pre>array(1) {
+  [0]=>
+  int(2)
+}
+</pre><pre>          [PG] new connect to PostgreSQL thanks to property info_pg</pre><pre>          BEGIN; SELECT * FROM prm_salary.pkg_web_oiv_info_inst_list(refcur =&gt; 'cursor_7ef397b8e3a35a138250faf9b4db770c', SL_OIV_LIST=&gt; '{"69737"}',SL_FORM_TYPES=&gt; '{"3"}',sl_institut_actual_type=&gt; -1,p_user_id=&gt; 7000,p_first_row=&gt; 1,p_last_row=&gt; 20,p_string_filter=&gt; 420029,P_USE_FILTER=&gt; '{"2"}');
+FETCH ALL IN cursor_7ef397b8e3a35a138250faf9b4db770c;</pre><br/><b>RES</b><pre>array(6) {
+  [0]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411562"
+    ["OKVED_CODE"]=>
+    string(5) "85.11"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002996"
+    ["NAME"]=>
+    string(54) "МАДОУ ДЕТСКИЙ САД &quot;МАЛЫШОК&quot; П. НОВОИЛЬИНСКИЙ"
+    ["OKVED"]=>
+    string(6) "411562"
+    ["OKVED_NAME"]=>
+    string(22) "Образование дошкольное"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(3) "294"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "1"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+  [1]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411562"
+    ["OKVED_CODE"]=>
+    string(5) "85.11"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002932"
+    ["NAME"]=>
+    string(37) "МБДОУ ДЕТСКИЙ САД №1 П. НОВОИЛЬИНСКИЙ"
+    ["OKVED"]=>
+    string(6) "411562"
+    ["OKVED_NAME"]=>
+    string(22) "Образование дошкольное"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(3) "295"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "2"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+  [2]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411562"
+    ["OKVED_CODE"]=>
+    string(5) "85.11"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002971"
+    ["NAME"]=>
+    string(46) "МБДОУ Д/С &quot;ПЕТУШОК&quot; С. ГРИГОРЬЕВСКОЕ"
+    ["OKVED"]=>
+    string(6) "411562"
+    ["OKVED_NAME"]=>
+    string(22) "Образование дошкольное"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(3) "435"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "3"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+  [3]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411562"
+    ["OKVED_CODE"]=>
+    string(5) "85.11"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002989"
+    ["NAME"]=>
+    string(26) "МБДОУ ДЕТСКИЙ САД Д. ГРУНИ"
+    ["OKVED"]=>
+    string(6) "411562"
+    ["OKVED_NAME"]=>
+    string(22) "Образование дошкольное"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(3) "785"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "4"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+  [4]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411562"
+    ["OKVED_CODE"]=>
+    string(5) "85.11"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002964"
+    ["NAME"]=>
+    string(39) "МБДОУ ДЕТСКИЙ САД № 2 СТ. ГРИГОРЬЕВСКАЯ"
+    ["OKVED"]=>
+    string(6) "411562"
+    ["OKVED_NAME"]=>
+    string(22) "Образование дошкольное"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(7) "3403782"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "5"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+  [5]=>
+  array(17) {
+    ["GRBS"]=>
+    string(5) "69737"
+    ["SL_OKVED_ID"]=>
+    string(6) "411564"
+    ["OKVED_CODE"]=>
+    string(5) "85.13"
+    ["SL_FORM_TYPE_ID"]=>
+    string(1) "3"
+    ["INN"]=>
+    string(10) "5942002918"
+    ["NAME"]=>
+    string(21) "МБОУ ЧЕКМЕНЁВСКАЯ ООШ"
+    ["OKVED"]=>
+    string(6) "411564"
+    ["OKVED_NAME"]=>
+    string(26) "Образование основное общее"
+    ["IS_SMALL"]=>
+    NULL
+    ["CHECK_CHANGES"]=>
+    NULL
+    ["IS_OIV"]=>
+    string(1) "0"
+    ["FORM_TYPE_NAME"]=>
+    string(16) "ЗП - Образование"
+    ["INST_PK"]=>
+    string(7) "3404319"
+    ["ORDER_BY"]=>
+    string(1) "1"
+    ["DIFF_ROWS_PER_INT_OKVED"]=>
+    string(1) "1"
+    ["ROW_NUM"]=>
+    string(1) "6"
+    ["ROW_CNT"]=>
+    string(1) "6"
+  }
+}
+</pre><br/><b>cnyyyy</b><pre>string(1) "6"
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002996"
+  ["NAME"]=>
+  string(54) "МАДОУ ДЕТСКИЙ САД &quot;МАЛЫШОК&quot; П. НОВОИЛЬИНСКИЙ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "294"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "1"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002996"
+  ["NAME"]=>
+  string(54) "МАДОУ ДЕТСКИЙ САД &quot;МАЛЫШОК&quot; П. НОВОИЛЬИНСКИЙ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "294"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "1"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002932"
+  ["NAME"]=>
+  string(37) "МБДОУ ДЕТСКИЙ САД №1 П. НОВОИЛЬИНСКИЙ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "295"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "2"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002932"
+  ["NAME"]=>
+  string(37) "МБДОУ ДЕТСКИЙ САД №1 П. НОВОИЛЬИНСКИЙ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "295"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "2"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002971"
+  ["NAME"]=>
+  string(46) "МБДОУ Д/С &quot;ПЕТУШОК&quot; С. ГРИГОРЬЕВСКОЕ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "435"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "3"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002971"
+  ["NAME"]=>
+  string(46) "МБДОУ Д/С &quot;ПЕТУШОК&quot; С. ГРИГОРЬЕВСКОЕ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "435"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "3"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002989"
+  ["NAME"]=>
+  string(26) "МБДОУ ДЕТСКИЙ САД Д. ГРУНИ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "785"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "4"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002989"
+  ["NAME"]=>
+  string(26) "МБДОУ ДЕТСКИЙ САД Д. ГРУНИ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(3) "785"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "4"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002964"
+  ["NAME"]=>
+  string(39) "МБДОУ ДЕТСКИЙ САД № 2 СТ. ГРИГОРЬЕВСКАЯ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(7) "3403782"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "5"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411562"
+  ["OKVED_CODE"]=>
+  string(5) "85.11"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002964"
+  ["NAME"]=>
+  string(39) "МБДОУ ДЕТСКИЙ САД № 2 СТ. ГРИГОРЬЕВСКАЯ"
+  ["OKVED"]=>
+  string(6) "411562"
+  ["OKVED_NAME"]=>
+  string(22) "Образование дошкольное"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(7) "3403782"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "5"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>;ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411564"
+  ["OKVED_CODE"]=>
+  string(5) "85.13"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002918"
+  ["NAME"]=>
+  string(21) "МБОУ ЧЕКМЕНЁВСКАЯ ООШ"
+  ["OKVED"]=>
+  string(6) "411564"
+  ["OKVED_NAME"]=>
+  string(26) "Образование основное общее"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(7) "3404319"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "6"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>ROW</b><pre>array(17) {
+  ["GRBS"]=>
+  string(5) "69737"
+  ["SL_OKVED_ID"]=>
+  string(6) "411564"
+  ["OKVED_CODE"]=>
+  string(5) "85.13"
+  ["SL_FORM_TYPE_ID"]=>
+  string(1) "3"
+  ["INN"]=>
+  string(10) "5942002918"
+  ["NAME"]=>
+  string(21) "МБОУ ЧЕКМЕНЁВСКАЯ ООШ"
+  ["OKVED"]=>
+  string(6) "411564"
+  ["OKVED_NAME"]=>
+  string(26) "Образование основное общее"
+  ["IS_SMALL"]=>
+  NULL
+  ["CHECK_CHANGES"]=>
+  NULL
+  ["IS_OIV"]=>
+  string(1) "0"
+  ["FORM_TYPE_NAME"]=>
+  string(16) "ЗП - Образование"
+  ["INST_PK"]=>
+  string(7) "3404319"
+  ["ORDER_BY"]=>
+  string(1) "1"
+  ["DIFF_ROWS_PER_INT_OKVED"]=>
+  string(1) "1"
+  ["ROW_NUM"]=>
+  string(1) "6"
+  ["ROW_CNT"]=>
+  string(1) "6"
+}
+</pre><br/><b>Cached query</b><pre>string(32) "6caab4e4e0855916fdf0269d77c944c7"
+</pre><pre>        processed tpl /var/www/mkr/salary/src/theme/tpl_pager.php</pre><pre>        processed tpl /var/www/mkr/salary/src/theme/tpl/oiv_info/tpl_report.php</pre><pre>          handling onafterexecute</pre><pre>          executing event onafterexecute</pre><pre>         result of event onafterexecute is: { "onAfterExecute": null, "checkUniqueCss": null, "checkColorTheme": null }</pre><pre>          handling onfinish</pre><pre>          executing event onfinish</pre><pre>         result of event onfinish is: { "stopTiming": null }</pre><pre>        Finish</pre><pre>      Processing extra Ajax incl files</pre><div><a name="217"></a><table class="er_t"><tr><td><b>115_1 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="373"></a><table class="er_t"><tr><td><b>115_2 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="6211"></a><table class="er_t"><tr><td><b>115_3 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="9091"></a><table class="er_t"><tr><td><b>115_4 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="8434"></a><table class="er_t"><tr><td><b>115_5 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="3449"></a><table class="er_t"><tr><td><b>115_6 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="6132"></a><table class="er_t"><tr><td><b>115_7 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="7888"></a><table class="er_t"><tr><td><b>115_8 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="3865"></a><table class="er_t"><tr><td><b>115_9 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="7028"></a><table class="er_t"><tr><td><b>115_10 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="7882"></a><table class="er_t"><tr><td><b>115_11 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="3837"></a><table class="er_t"><tr><td><b>115_12 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="1197"></a><table class="er_t"><tr><td><b>115_13 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="3704"></a><table class="er_t"><tr><td><b>115_14 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="2809"></a><table class="er_t"><tr><td><b>115_15 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="170"></a><table class="er_t"><tr><td><b>115_16 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="8274"></a><table class="er_t"><tr><td><b>115_17 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="2653"></a><table class="er_t"><tr><td><b>115_18 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="8093"></a><table class="er_t"><tr><td><b>115_19 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="92"></a><table class="er_t"><tr><td><b>115_20 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="5534"></a><table class="er_t"><tr><td><b>115_21 E_NOTICE Undefined index: EXIST_DOC</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[338]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="1489"></a><table class="er_t"><tr><td><b>115_22 E_NOTICE Undefined index: STATUS_ID</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="9175"></a><table class="er_t"><tr><td><b>115_23 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[339]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="1786"></a><table class="er_t"><tr><td><b>115_24 E_NOTICE Undefined index: </b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/oiv_info/classes/OivInfoHelper.php</td><td>[354]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[83] OivInfoHelper ::getGrid</td></tr><tr><td>&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="6248"></a><table class="er_t"><tr><td><b>115_25 E_NOTICE Undefined index: canMassApprove</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/theme/tpl_pager.php</td><td>[38]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;modules/common/classes/templates.php</td><td>[493]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[587] Theme ::processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[692] UIPagination ->processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[451] UIPagination ->drawJS</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/theme/tpl/oiv_info/tpl_report.php</td><td>[18] UIPagination ->draw</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/templates.php</td><td>[493]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[84] Theme ::processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><div><a name="2435"></a><table class="er_t"><tr><td><b>115_26 E_NOTICE Undefined index: canMail</b></td><td>Ф-я</td></tr><tr><td>&nbsp;src/theme/tpl_pager.php</td><td>[51]   myErrorHandler</td></tr><tr><td>&nbsp;&nbsp;modules/common/classes/templates.php</td><td>[493]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[587] Theme ::processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[692] UIPagination ->processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/ui/classes/new/pagination.php</td><td>[451] UIPagination ->drawJS</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/theme/tpl/oiv_info/tpl_report.php</td><td>[18] UIPagination ->draw</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/templates.php</td><td>[493]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/oiv_info/classes/OivInfoManager.php</td><td>[84] Theme ::processTemplate</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src/oiv_info/idx_oiv.php</td><td>[5] OivInfoManager ->go</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/core.php</td><td>[758]   include</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modules/common/classes/main/main.php</td><td>[118] Core ->execute</td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php</td><td>[2]   require_once</td></tr></table></div><table class="queries-table"><tr><th style="width:20px">№</th><th>Text</th></tr><tr><td>1</td><td>data 0.001:<pre>select * from rep_core_config </pre><span></span></td></tr><tr><td>2</td><td>data 0.001:<pre>
+    SELECT prm_admin.setuserid('0')</pre>
+<span></td></tr><tr><td>3</td><td>data 0.004:<pre> SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp, TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME, USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL FROM prm_admin. T_USERS T LEFT JOIN prm_admin. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID LEFT JOIN prm_admin. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED LEFT JOIN prm_admin. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED WHERE S.USER_SESSION = 'bc4f57ceb4f418f5cca197fb5c4d8014' AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = 2000 </pre><span> <br/>modified :  SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp, TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME, USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL FROM prm_admin. T_USERS T LEFT JOIN prm_admin. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID LEFT JOIN prm_admin. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED LEFT JOIN prm_admin. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED WHERE S.USER_SESSION = 'bc4f57ceb4f418f5cca197fb5c4d8014' AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = 2000 </span></td></tr><tr><td>4</td><td>data 0.043:<pre>
+    SELECT prm_admin.setuserid('7000')</pre>
+<span></td></tr><tr><td>5</td><td>info_pg 0.01:<pre>SELECT * FROM  prm_salary.pkg_web_oiv_info_inst_list( refcur =&gt; $9, SL_OIV_LIST =&gt; $5, SL_FORM_TYPES =&gt; $3, sl_institut_actual_type =&gt; $1, p_user_id =&gt; $8, p_first_row =&gt; $6, p_last_row =&gt; $7, p_string_filter =&gt; $2, P_USE_FILTER =&gt; $4) </pre><span>bound :sl_institut_actual_type (1) as = '-1'
+                                                        bound :p_string_filter (2) as = '420029'
+                                                        bound :SL_FORM_TYPES (3) as ='{"3"}'
+                                                        bound :P_USE_FILTER (4) as ='{"2"}'
+                                                        bound :SL_OIV_LIST (5) as ='{"69737"}'
+                                                        bound :p_first_row (6) as = 1
+                                                        bound :p_last_row (7) as = 20
+                                                        bound :p_user_id (8) as = '7000'
+                                                        bound :refcur (9) as ='cursor_7ef397b8e3a35a138250faf9b4db770c'
+                                                        </span></td></tr><tr><td>6</td><td>info_pg 0.029:<pre>FETCH ALL IN cursor_7ef397b8e3a35a138250faf9b4db770c </pre><span></span></td></tr><tr><td>7</td><td>info_pg 0:<pre>CLOSE cursor_7ef397b8e3a35a138250faf9b4db770c </pre><span></span></td></tr></table><table class="dbg_timingTable"><tr><th style="width:90px">Key</th><th>Time</th></tr><tr><td>output</td><td>2.2583</td></tr><tr><td>all</td><td>2.2571</td></tr><tr><td>debugMessage</td><td>0.0000</td></tr><tr><td>openDb_data</td><td>1.0752</td></tr><tr><td>[PG] exact openDb_data</td><td>1.0752</td></tr><tr><td>op query 1</td><td>0.0007</td></tr><tr><td>onafterexecute</td><td>0.0000</td></tr><tr><td>onbeforeauth</td><td>0.0000</td></tr><tr><td>onafterauth</td><td>0.0000</td></tr><tr><td>onbeforeexecute</td><td>0.0000</td></tr><tr><td>onafterchecksession</td><td>0.0000</td></tr><tr><td>onauthnotactivated</td><td>0.0000</td></tr><tr><td>onafterlogout</td><td>0.0000</td></tr><tr><td>onauthnouser</td><td>0.0000</td></tr><tr><td>onfinish</td><td>0.0000</td></tr><tr><td>CLIENT</td><td>0.0001</td></tr><tr><td>ex query 2</td><td>0.0013</td></tr><tr><td>op query 3</td><td>0.0037</td></tr><tr><td>ex query 4</td><td>0.0430</td></tr><tr><td>onexactbeforeexecute</td><td>0.0000</td></tr><tr><td>onlogintpl</td><td>0.0000</td></tr><tr><td>initmodal</td><td>0.0000</td></tr><tr><td>building menu</td><td>0.0030</td></tr><tr><td>TreeSelectionModifier get</td><td>0.0000</td></tr><tr><td>getFromQuery a</td><td>0.0005</td></tr><tr><td>upd ch lvls</td><td>0.0000</td></tr><tr><td>openDb_info_pg</td><td>1.0584</td></tr><tr><td>[PG] exact openDb_info_pg</td><td>1.0584</td></tr><tr><td>op query 5</td><td>0.0097</td></tr><tr><td>op query 6</td><td>0.0289</td></tr><tr><td>op query 7</td><td>0.0002</td></tr><tr><td>tpl tpl/oiv_info/tpl_report.php</td><td>0.0009</td></tr><tr><td>tpl tpl_pager.php</td><td>0.0005</td></tr></table><table class="profilerTable"><thead><tr><td>Label</td><td>Timing</td><td>Memory, Kb</td></tr></thead><tbody></tbody></table><br/>memory peak = 6.9Mb<pre>FE.manageEvent("ajaxonload",function(event, target){
+  FE.loadEFilesJS([{id:[137],path:"modules/common/js/jquery/jquery.watch.js?rnd=1503657768"},{id:[143],path:"modules/common/js/jquery/jquery.tooltip.js?rnd=1503657768"},{id:[144],path:"modules/common/js/qstring.js?rnd=1503657768"},{id:[175],path:"modules/common/js/jquery/ui.stepper.js?rnd=1503657768"},{id:[191],path:"modules/common/js/jquery/ui.draggable.js?rnd=1503657768"},{id:[193],path:"modules/common/js/windows.js?rnd=1503657768"},{id:[233],path:"modules/common/js/jquery/jquery.numberMask.js?rnd=1503657768"},{id:[234],path:"modules/common/js/jquery/jquery.maskedinput-1.2.2.js?rnd=1503657768"},{id:[201],path:"modules/common/js/jquery/jquery.form.min.js?rnd=1503657768"},{id:[202],path:"modules/common/js/jquery/html2canvas.js?rnd=1503657768"},{id:[203],path:"modules/common/js/jquery/canvas_rgbcolor.js?rnd=1503657768"},{id:[204],path:"modules/common/js/jquery/canvas_StackBlur.js?rnd=1503657768"},{id:[205],path:"modules/common/js/jquery/canvas_canvg.js?rnd=1503657768"},{id:[130,131,132,133,134,135,136,138,139,140],path:"temp/hashes/js/common/3a70fa8797e9461eb3e69412947c5388a.js?rnd=1510318720"},{id:[190],path:"src/theme/js/portal.js?rnd=1507030869"},{id:[194],path:"modules/ui/js/ui.new.windows.js?rnd=1503657825"},{id:[151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,176,177,179],path:"temp/hashes/js/ui/0934377f9d947bb7fad9447e262c8ef5a.js?rnd=1510318721"},{id:[146],path:"modules/ui/skins/light_2011/js/new_ui.js?rnd=1503657825"},{id:[182],path:"modules/datetimepicker/js/xcal.js?rnd=1503657770"},{id:[198],path:"modules/tree/js/tree.js?rnd=1503657821"},{id:[199],path:"modules/tree/js/tree.ext.js?rnd=1503657821"},{id:[213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232],path:"temp/hashes/js/grid_dev2/729c704a9cc4add8060be4060f9b35bea.js?rnd=1510318721"},{id:[235],path:"modules/embed/js/swfobject.js?rnd=1503657782"},{id:[236],path:"modules/embed/js/embed.js?rnd=1503657782"},{id:[237],path:"modules/embed/js/clientembed.js?rnd=1503657782"},{id:[238],path:"modules/embed/js/html5embed.js?rnd=1503657782"},{id:[239],path:"modules/grid_form/js/grid_form.js?rnd=1503657790"},{id:[200],path:"modules/export/js/exporter.js?rnd=1503657785"},{id:[206,207,208,209],path:"temp/hashes/js/eds/9edf43fce5b9c93542025d5eec39fcd2a.js?rnd=1510318721"},{id:[184],path:"src/js/video-js/video.js?rnd=1507030869"},{id:[185],path:"src/js/video.js?rnd=1507030869"},{id:[240],path:"src/js/base_manager.js?rnd=1507030869"},{id:[430],path:"src/oiv_info/js/oivinfo_manager.js?rnd=1510309703"},{id:[243],path:"src/js/input_forms/iface.js?rnd=1507030869"}]);FE.loadEFile('431','src/oiv_info/css/oiv_style.css');FE.loadEFile('183','src/js/video-js/video-js.css');FE.loadEFile(210,'temp/hashes/css/eds/498a7d5c082593e4ffccaee9331bf564a.css');FE.loadEFile(212,'temp/hashes/css/grid_dev2/d48a3b5f423227c404d3c19b0f3cb11fa.css');FE.loadEFile('197','modules/tree/css/tree.css');FE.loadEFile('181','modules/datetimepicker/css/xcal.css');FE.loadEFile('196','modules/ui/skins/light_2011/css/theme_msk_mkr.css');FE.loadEFile('195','modules/ui/skins/light_2011/css/theme_unique_ui.css');FE.loadEFile('149','modules/ui/skins/light_2011/css/icomoon.css');FE.loadEFile('148','modules/ui/skins/light_2011/css/img-icons.css');FE.loadEFile('147','modules/ui/skins/light_2011/css/old_control.css');FE.loadEFile('145','modules/ui/skins/light_2011/css/new_ui.css');FE.loadEFile(180,'temp/hashes/css/ui/c00ac8bbf7cb27d325948cd51c52441fa.css');FE.loadEFile('254','modules/ui/css/ui.pagination.css');FE.loadEFile('150','modules/ui/css/ui.button.css');FE.loadEFile('189','src/theme/css/ui.css');FE.loadEFile('188','src/theme/css/style.css');FE.loadEFile('187','src/theme/css/authorization.css');FE.loadEFile('186','src/theme/css/reset.css');FE.loadEFile(192,'temp/hashes/css/common/8e4456d230f7235d6ee6e0e71f4d1529a.css');$.browser.browserName = "Chrome"; $.browser.browserVersion = "61.0.3163.100";$.browser.isIPad = false;$.browser.isMobile = false;$.browser.isPhone = false;
+});
+FE.manageEvent("ajaxloadcompleted",function(event, target){
+  window.AllExporters.newExporter('page');window.AllExporters.get( 'page' ).register( { "ajax": "oiv_info", "action": "get_report", "html_id": "treeOutput", "ajaxId": "6924254115", "p_oiv_id": "69737", "id_check": "-1", "id_small": "-1", "id_type": "3", "id_actual": "-1", "page_num": "1", "p_str_fltr": "420029", "p_use_inn": "1", "p_use_id": "0", "p_use_okpo": "0", "p_use_name": "0", "p_use_full": "0", "curSep": "1", "curPage": "page_num" } );OivInfoManager.pagenumber=1;OivInfoManager.sep=1;OivInfoManager.oiv="69737";        $('#phdPager').html($('#tmp_phdPager').html());        $('#tmp_phdPager').remove();      ;
+});
+</pre></div><div class="ajaxLength" title="55283"></div>
+        <table class="simple-table"><thead>
+        <tr>
+          <td></td> 
+          <td></td> 
+          <td></td> 
+          <td>Учреждение</td>
+          <td>ИНН</td>
+          <td style="min-width:100px;">ОКВЭД</td>
+          <td>Форма</td>
+          <td>Численность</td>
+        </tr>
+        </thead><tbody>
+      <tr class="gu-row gu-294-0"><td><div onClick="OivInfoManager.getDocGu('294','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '294','0');return false;">МАДОУ ДЕТСКИЙ САД &quot;МАЛЫШОК&quot; П. НОВОИЛЬИНСКИЙ</a></td><td><span class="inn">5942002996</span></td><td>411562 - Образование дошкольное</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr><tr class="gu-row gu-295-0"><td><div onClick="OivInfoManager.getDocGu('295','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '295','0');return false;">МБДОУ ДЕТСКИЙ САД №1 П. НОВОИЛЬИНСКИЙ</a></td><td><span class="inn">5942002932</span></td><td>411562 - Образование дошкольное</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr><tr class="gu-row gu-435-0"><td><div onClick="OivInfoManager.getDocGu('435','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '435','0');return false;">МБДОУ Д/С &quot;ПЕТУШОК&quot; С. ГРИГОРЬЕВСКОЕ</a></td><td><span class="inn">5942002971</span></td><td>411562 - Образование дошкольное</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr><tr class="gu-row gu-785-0"><td><div onClick="OivInfoManager.getDocGu('785','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '785','0');return false;">МБДОУ ДЕТСКИЙ САД Д. ГРУНИ</a></td><td><span class="inn">5942002989</span></td><td>411562 - Образование дошкольное</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr><tr class="gu-row gu-3403782-0"><td><div onClick="OivInfoManager.getDocGu('3403782','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '3403782','0');return false;">МБДОУ ДЕТСКИЙ САД № 2 СТ. ГРИГОРЬЕВСКАЯ</a></td><td><span class="inn">5942002964</span></td><td>411562 - Образование дошкольное</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr><tr class="gu-row gu-3404319-0"><td><div onClick="OivInfoManager.getDocGu('3404319','0')" class=""></div></td><td><div class="ico-chk-"></div></td><td></td><td><a href="#" onclick="OivInfoManager.selectGU(this, '3404319','0');return false;">МБОУ ЧЕКМЕНЁВСКАЯ ООШ</a></td><td><span class="inn">5942002918</span></td><td>411564 - Образование основное общее</td><td>ЗП - Образование</td><td style="text-align: center;"><span style="cursor:pointer;color:#1869c0!important"  class="icon_mkr_group2"  title=""></span></td></tr></tbody></table><div id="tmp_phdPager" style="display:none;visibility:hidden;"><div class="pager-total">Всего: 6</div></div>
