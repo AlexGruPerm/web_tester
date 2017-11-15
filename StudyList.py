@@ -1,6 +1,10 @@
 from operator import itemgetter
 #https://stackoverflow.com/questions/25050311/extract-first-item-of-each-sublist-in-python
 
+
+
+
+'''
 def multiply(x):
     return (x*x)
 
@@ -18,6 +22,7 @@ for i in range(5):
     #print(i)
     value = list(map(lambda x: x(i), funcs))
     print(value)
+'''
 
 # i =0..4
 
