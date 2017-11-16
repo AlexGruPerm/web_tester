@@ -1,7 +1,7 @@
 """Class TestRunner create's instances of all test class and run start() """
 import logging
 
-class TestRunner():
+class TestRunner(): 
     '''Class for runs individual test from input list'''
     arr_test_objs = []   # list of test objects
     arr_test_names = []  # list of test class names

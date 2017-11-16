@@ -1,9 +1,6 @@
-import logging
 from flask import Flask, url_for, render_template, request, make_response, redirect
 
 #https://ru.wikibooks.org/wiki/Flask
-
-logging.basicConfig(format = u'%(filename)s[LINE:%(lineno)d]# %(levelname)-8s [%(asctime)s]  %(message)s', level = logging.DEBUG)
 
 app = Flask(__name__)
 
@@ -12,6 +9,7 @@ def index():
     #resp = make_response(render_template(...))
     #resp.set_cookie('username', 'XYZ')
     #return resp
+    app.logger.debug("app.logger.debug index page")
     return "index page"
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -30,7 +28,6 @@ def login():
 
 @app.route('/hello/<name>')
 def hello2(name=None):
-    logging.debug("call hello2")
     return render_template('hello.html', name=name)
 
 @app.route('/sec')
@@ -38,8 +35,16 @@ def second():
     return render_template('hello.html', name="abc")
 
 if __name__ == "__main__":
-    logging.debug("before run ....")
-    app.debug = True
+    #app.debug = True
+    #http://flask-russian-docs.readthedocs.io/ru/latest/config.html
+    app.config.update(
+        DEBUG=True,
+        SECRET_KEY='A0Zr98j/3yX R~XHH!jmN]LWX/,?RT',
+        SESSION_COOKIE_NAME='PHPSESSID',
+        SESSION_COOKIE_DOMAIN='mkrpk.ders.proitr.ru',
+        SESSION_COOKIE_PATH='/',
+        SESSION_REFRESH_EACH_REQUEST=False
+    )
     #with app.test_request_context():
     #    print(url_for('index'))
     #    print(url_for('show_user_profile', username='John Doe'))
