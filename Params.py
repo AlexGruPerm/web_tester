@@ -5,10 +5,18 @@ import requests
 
 results_text_file_1 = 'test_result.txt'
 
-session_id_value  = "48077d9eb759e64181b53233ad315546"
-session_prm_salary = "bc4f57ceb4f418f5cca197fb5c4d8014"
+session_id_value  = "0d1c2f5faad2824e4d402905a1b5a9ea"
+session_prm_salary = "66738b6c87cde9a04dfa02f7b066918a"
 domain = "mkrpk.ders.proitr.ru"
 ajax_url = "http://mkrpk.ders.proitr.ru/salary/index.php"
+
+http_auth = {
+             "use_http_auth": 1,
+             "cred" : {
+                        "userName" : 'support',
+                        "passWord" : ''
+                      }
+            }
 
 params_1 = {
            "name": "Report 11_1 v2 Report page",
@@ -115,7 +123,7 @@ params_3 = {
                        "PHPSESSID":         {"value":session_id_value,   "domain":domain, "path":"/"},
                        "session_prm_salary":{"value":session_prm_salary, "domain":domain, "path":"/"},
                        "__YakushevDev":     {"value":"0",                "domain":domain, "path":"/salary"},
-                       "__DebugUkaz":       {"value":"1",                "domain":domain, "path":"/salary"}
+                       "__DebugUkaz":       {"value":"0",                "domain":domain, "path":"/salary"}
                       },
            "post_data": {
                          "ajax":"oiv_info",
@@ -142,8 +150,8 @@ params_3 = {
                             "max":4.0
                            },
            "test_suc_size": {
-                            "min": 53000,
-                            "max": 300000
+                            "min": 16000,
+                            "max": 18000
                             },
            "test_suc_custom_property":{
                                        "row_count" : 6

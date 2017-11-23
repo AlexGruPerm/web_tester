@@ -5,6 +5,8 @@
 import logging
 import sys
 import io
+import urllib.request as urllib2
+import base64
 import json
 #import codecs
 #from lxml import html
@@ -13,8 +15,13 @@ import json
 #from lxml import etree
 #import lxml.html
 import datetime
+import urllib.parse
+import urllib.request
+import urllib.response
+from requests.auth import HTTPBasicAuth
 #import xml.etree.ElementTree as ET
 import requests
+import Params # only for global setting like http_auth
 
 class PageDownload():
     '''
@@ -45,10 +52,29 @@ class PageDownload():
         t_begin = datetime.datetime.now()
         #logging.debug('type self.cookie'+(str(type(self.cookie))))
         #logging.debug('self.test_proj_instance.cookie=' + (str(self.test_proj_instance.cookie)))
-        requests_res = requests.post(url = self.url,
-                                     cookies = self.cookie,
-                                     data = self.params,
-                                     headers = self.headers)
+        userName = ''
+        passWord = ''
+
+        if Params.http_auth.get('use_http_auth') == 1:
+            userName = Params.http_auth.get('cred').get('userName')
+            passWord = Params.http_auth.get('cred').get('passWord')
+
+        if Params.http_auth.get('use_http_auth') == 1:
+            logging.debug('http authentication ON username='+userName)
+            requests_res = requests.post(url = self.url,
+                                         cookies = self.cookie,
+                                         data = self.params,
+                                         headers = self.headers,
+                                         auth=HTTPBasicAuth(userName, passWord)
+                                        )
+        else:
+            logging.debug('http authentication OFF')
+            requests_res = requests.post(url = self.url,
+                                         cookies = self.cookie,
+                                         data = self.params,
+                                         headers = self.headers
+                                        )
+
         t_end = datetime.datetime.now()
         delta = t_end - t_begin
         self.download_time = delta.total_seconds()
