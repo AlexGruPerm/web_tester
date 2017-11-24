@@ -1,8 +1,5 @@
 
-1) Store all results of one test run in single dict.
-2) Write separate classes (universal interface) for saving results into text file, db.
-3)
-
+1) Make Downloader independant from any classes of modules. Special from Params - now is't import it.
 
 
 

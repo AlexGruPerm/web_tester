@@ -14,7 +14,7 @@ http_auth = {
              "use_http_auth": 1,
              "cred" : {
                         "userName" : 'support',
-                        "passWord" : ''
+                        "passWord" : '$uPr@2014z'
                       }
             }
 
