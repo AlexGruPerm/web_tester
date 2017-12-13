@@ -51,7 +51,7 @@ for document in cursor:
 
 print("----------------------")
 
-cursor = db.rest.find({'borough': 'Manhattan'})
+cursor = db.rest.find({'cuisine': 'Italian'})
 
 for document in cursor:
     print(">>>  ", document)
