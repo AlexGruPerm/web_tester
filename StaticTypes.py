@@ -14,7 +14,7 @@ def solve_task(step):
            mx = max(s1)
            while (True):
               if len(s1)==0:
-                  break
+                  break 
               x = s1.pop()
               #print("1- x=",x)
               if x == mx:

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3c31e27-3815-4356-baf3-61361b0c7294" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StaticTypes.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StudyThreads.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StudyMongoDB.py" afterPath="$PROJECT_DIR$/StudyMongoDB.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StaticTypes.py" afterPath="$PROJECT_DIR$/StaticTypes.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/StaticTypes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -615,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511535843969</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Test jenkins">
+      <created>1513176421120</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1513176421120</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -691,7 +696,6 @@
   <component name="VcsManagerConfiguration">
     <option name="SHOW_PATCH_IN_EXPLORER" value="false" />
     <option name="MAXIMUM_HISTORY_ROWS" value="10000" />
-    <MESSAGE value="-" />
     <MESSAGE value="grid_param_2 = &quot;data&quot;: json.dumps(data_str_2)&#10;Params as json" />
     <MESSAGE value="Logical point" />
     <MESSAGE value="dict methods" />
@@ -716,7 +720,8 @@
     <MESSAGE value="Begin stady Flask" />
     <MESSAGE value="Fixed HTTP Auth and delete trash files from project" />
     <MESSAGE value="Begin stady MongoDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Begin stady MongoDB" />
+    <MESSAGE value="Test jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test jenkins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -947,6 +952,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="40" column="35" lean-forward="true" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,7 +967,7 @@
     <entry file="file://$PROJECT_DIR$/StaticTypes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
