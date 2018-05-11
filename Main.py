@@ -22,6 +22,6 @@ def main():
 
     #for i in range(1,2400):
     test_runner.start()
-    #    sleep(30)
+    sleep(30)
 
 main()
